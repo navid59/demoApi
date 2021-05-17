@@ -1,11 +1,13 @@
-<?php 
+<?php
 require_once("config/config.php");
+
+$_SESSION["apiKey"] = $trader[0]['apiKey']; 
 $prices = array_column($products, 'pPrice');
 // die();
 ?>
 <div class="row" style="padding-top:15px;">
   <div class="col-md-4 order-md-2 mb-4">
-    <form class="needs-validation" novalidate>
+    <form id="checkoutForm" class="needs-validation" novalidate>
     <h4 class="d-flex justify-content-between align-items-center mb-3">
       <span class="text-muted">Product Info</span>
       <span class="badge badge-secondary badge-pill">&nbsp;</span>
@@ -47,7 +49,6 @@ $prices = array_column($products, 'pPrice');
     </ul>
   </div>
   <div class="col-md-8 order-md-1">
-    <!-- <form class="needs-validation" novalidate> -->
       <h4 class="mb-3">Config Information</h4>
       <div class="mb-3">
           <label for="apiKey">API KEY</label>

@@ -4,6 +4,7 @@ class authorize {
     public $authorizeArr;
     public $paReq;
     public $backUrl;
+    public $bankAuthUrl;
 
     function __construct(){
     }
@@ -22,9 +23,13 @@ class authorize {
         return true;
     }
 
+
+
+
     // Send request json
-    public function doAuthorize() {
-        $url = 'https://secure.sandbox.netopia-payments.com//sandbox/authorize';
+    public function doAuthorizeBAD() {
+        // $url = 'https://secure.sandbox.netopia-payments.com/sandbox/authorize';
+        $url = $this->bankAuthUrl;
         $ch = curl_init($url);
   
         // Array DATA
@@ -104,28 +109,9 @@ class authorize {
         // Close cURL resource
         curl_close($ch);
         
-        $paRes = $this->getStringBetweenTwoString($result);
-        return $paRes;
+        echo $result;
+        die('DIE');
+        // $paRes = $this->getStringBetweenTwoString($result);
+        // return $paRes;
       }
-
-      function getStringBetweenTwoString($str)
-            {
-            $setRealTimeLog = 
-            [
-                "getStringBetweenTwoString" =>  $str
-            ];
-            log::setLog(null, null ,$setRealTimeLog);
-            
-            $starting_word = 'name="paRes" value="';
-            $ending_word   = '<input type="submit" value="Submit">';
-            $subtring_start = strpos($str, $starting_word);
-            //Adding the strating index of the strating word to 
-            //its length would give its ending index
-            $subtring_start += strlen($starting_word);  
-            //Length of our required sub string
-            $size = strpos($str, $ending_word, $subtring_start) - $subtring_start;  
-            // Return the substring from the index substring_start of length size 
-            $substring = substr($str, $subtring_start, $size);
-            return substr($substring, 0, -5);  
-            }
 }

@@ -1,15 +1,16 @@
 <?php 
 include_once('lib/start.php');
 include_once('lib/authorize.php');
+include_once('lib/bank.php');
 include_once('lib/log.php');
-require_once("config/config.php");
-// die(print_r($trader[0]['backUrlAuth']));
+include_once("config/config.php");
+session_start();
 class request extends start{
-    
     function __construct(){
       $jsonRequest = $this->setRequest();
       $result = $this->sendRequest($jsonRequest);
       print_r($result);
+       
 
       $resultObj = json_decode($result);
     //   echo $resultObj->message;
@@ -24,12 +25,20 @@ class request extends start{
                     ];
                 log::setLog($resultObj->data->error->code, null ,$setRealTimeLog);
                 
+                // Set authenticationToken & ntpID to session
+                $_SESSION['authenticationToken'] = $resultObj->data->customerAction->authenticationToken;
+                $_SESSION['ntpID'] = $resultObj->data->payment->ntpID;
+
                 $authorize = new authorize();
                 $paReq   = $resultObj->data->customerAction->formData->paReq;
-                $backUrl = "http://ctbhub.com/apiV1Test/backAuth.php"; //$trader[0]['backUrlAuth']; //$resultObj->data->customerAction->formData->backUrl;
+                $backUrl = "http://35.204.43.65/demo/backAuth.php"; //bank::validateBackUrl($resultObj->data->customerAction->formData->backUrl);
+                $bankUrl = bank::validateBackUrl($resultObj->data->customerAction->url);
+                
                 
                 if($authorize->setParam($paReq,$backUrl)){
-                    $resultAuthorize = $authorize->doAuthorize();
+                    // echo "<script type='text/javascript'>doRedirectSandboxAuthorize('$backUrl', '$paReq');</script>";
+                    // echo "<script type='text/javascript'>doRedirectSandboxAuthorize();</script>";
+                    // $resultAuthorize = $authorize->doRedirect();
                     // print_r($resultAuthorize);
                     // die('Choos');
                 } else {

@@ -42,9 +42,8 @@ $trader = array(
     array(
         'id'            => 1,
         'posSignature'  => 'LXTP-3WDM-WVXL-GC8B-Y5DA',
-        'notifyUrl'     => 'http://ctbhub.com/apiV1Test/ipn.php',
-        'redirectUrl'   => 'http://ctbhub.com/apiV1Test/success.php',
-        'backUrlAuth'   => 'http://ctbhub.com/apiV1Test/backAuth.php',
+        'notifyUrl'     => 'http://35.204.43.65/demo/ipn.php',
+        'redirectUrl'   => 'http://35.204.43.65/demo/return.php',
         'apiKey'        => 'Uxf3OY--rDK3Qae8CiJJUlAcuRJFp7tzGY4M8KocQaCGyfEqUGhGskv0'
     ),
 );

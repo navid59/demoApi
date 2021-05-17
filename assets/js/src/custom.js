@@ -42,13 +42,14 @@ $(document).ready(() => {
 // });
 
 $(function () {
-  $('form').on('submit', function (e) {
+  $('#checkoutForm').on('submit', function (e) {
     $('form')[0].reset(); // to Clean values by duble click
   e.preventDefault();
   $.ajax({
       type: 'post',
       url: 'post.php',
-      data: $('form').serialize(),
+      // data: $('form').serialize(),
+      data: $('#checkoutForm').serialize(),
       success: function (response) {
         alert('form was submitted');
         
@@ -58,7 +59,8 @@ $(function () {
           $('#message-warning').hide();
           $('#message-info').hide();
           $('#message-success').show();
-          $('#msgTitle').html(response.message);
+          $('#msgTitle').html("Data Sent");
+          
           
           console.log(response.data); // TEMPORARY
           console.log(response.data.error.code);  // TEMPORARY
@@ -68,9 +70,16 @@ $(function () {
             $('#paReq').val(response.data.customerAction.formData.paReq);
             $('#ntpID').val(response.data.payment.ntpID);
             $('#conclusionMsg').append('<li>Your card have 3DS</li>');
-
-            // 1) Sandbox/Auton
-            // 2) Payment/Card/Verify-auth
+            $('#conclusionMsg').append('<li>You will be redirecting to Bank Page</li>');
+            
+            /**
+             * Step 2) Sandbox/Auton
+             * preparing for redirect
+             */
+            var backUrl = "http://35.204.43.65/demo/backAuth.php";
+            doRedirectSandboxAuthorize(response.data.customerAction.formData.paReq, backUrl);
+            
+            // #3 Next step is ) Payment/Card/Verify-auth
             
           }else {
             $('#authenticationToken').val(response.data.customerAction.authenticationToken);
@@ -94,8 +103,10 @@ $(function () {
   });
 });
 
-function setsandboxAuthorize() {
-  // $('#authenticationToken').html(authenticationToken);
+// JS make redirect to an internal page
+function doRedirectSandboxAuthorize(paReq, backUrl) {
+  var url = "doAuth.php?paReq="+paReq+"&backUrl="+backUrl;
+  window.location.href = url;
   return true;
 }
 
