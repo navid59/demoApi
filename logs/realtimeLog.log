@@ -1,9 +1,80 @@
-<li class="list-group-item"> - 12:20:58 -   <b>IPN : </b> IPN Is hitting</li>
-        <li class="list-group-item"> - 12:22:35 -   <b>IPN : </b> IPN Is hitting <b>missingVerificationToken : </b> Verification-token is missing</li>
-        <li class="list-group-item"> - 12:25:55 -   <b>IPN : </b> IPN Is hitting</li>
-        <li class="list-group-item"> - 12:25:55 -   <b>IPN : </b> IPN Is hitting <b>missingVerificationToken : </b> Verification-token is missing</li>
-        <li class="list-group-item"> - 12:26:16 -   <b>IPN : </b> IPN Is hitting</li>
-        <li class="list-group-item"> - 12:26:30 -   <b>IPN : </b> IPN Is hitting</li>
-        <li class="list-group-item"> - 12:28:47 -   <b>IPN : </b> IPN Is hitting</li>
-        <li class="list-group-item"> - 12:28:47 -   <b>IPN : </b> IPN Is hitting <b>missingPublicKey : </b> The public key certificates/live.LXTP-3WDM-WVXL-GC8B-Y5DA.public.cerA does not exist</li>
+<li class="list-group-item"> - 13:25:26 -   <b>ReturnUrl : </b> Success Page Is hitting</li>
+        <li class="list-group-item"> - 13:25:26 -  </li>
+        <li class="list-group-item"> - 13:41:35 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 13:41:35 -   <b>paRes : </b> 9e3Kvrl4kyVS43-u7SWeo9RlggIo_XnZczICsLgBQ-zQDWtVhmOM5SWx6A==</li>
+        <li class="list-group-item"> - 13:41:36 -   <b>Code : </b> 400 <b>Message : </b> You send Bad Request to verify-auth.</li>
+        <li class="list-group-item"> - 13:42:03 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 13:42:03 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 13:42:03 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 13:42:03 -   <b>Step2 : </b> Set Params for Auturize <b>paReq : </b> B-etYZ-6ubroBAPPAj28VkamydjjLa9qOcCAMuVvS4zxTVPR4QpCK1ZY_VgGrkxsmiIeaC02-0R69YwuL-844O0= <b>backUrl : </b> http://35.204.43.65/demo/backAuth.php</li>
+        <li class="list-group-item"> - 13:42:04 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 13:42:08 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 13:42:08 -   <b>paRes : </b> Xr8PiasnkG2iZHd3SZ5zy1DPjFKPzG-q3CFpypkCzSL1FV7FPj_lFFfREA==</li>
+        <li class="list-group-item"> - 13:42:09 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 13:44:01 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 13:44:01 -   <b>paRes : </b> Xr8PiasnkG2iZHd3SZ5zy1DPjFKPzG-q3CFpypkCzSL1FV7FPj_lFFfREA==</li>
+        <li class="list-group-item"> - 13:44:02 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 13:46:41 -   <b>IPN : </b> IPN Is hitting</li>
+        <li class="list-group-item"> - 13:46:41 -   <b>IPN - Error : </b> Hash Data is not matched with subject <b>OrgMsgError : </b> Firebase\JWT\SignatureInvalidException: Signature verification failed in /var/www/html/demo/vendor/firebase/php-jwt/src/JWT.php:128
+Stack trace:
+#0 /var/www/html/demo/ipn.php(139): Firebase\JWT\JWT::decode()
+#1 {main}</li>
+        <li class="list-group-item"> - 14:03:03 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 14:03:03 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 14:03:03 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 14:03:03 -   <b>Step2 : </b> Set Params for Auturize <b>paReq : </b> QP3YOcO6h0A0RRglZX6KBjWMIi2auip2bjO_8zoJNm4eR04OgK-xa6bpCKCUtpdMhsLCbujr4ggUNSSImzSbixI= <b>backUrl : </b> http://35.204.43.65/demo/backAuth.php</li>
+        <li class="list-group-item"> - 14:03:05 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 14:03:10 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 14:03:10 -   <b>paRes : </b> WFjK3CVDFk6jSPEaH80_KW6sPuL2CP0cLRiNPbkO16L6_27cAQCh0XAo_A==</li>
+        <li class="list-group-item"> - 14:03:11 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 14:06:07 -   <b>IPN : </b> IPN Is hitting</li>
+        <li class="list-group-item"> - 14:06:07 -   <b>IPN - Error : </b> Hash Data is not matched with subject <b>OrgMsgError : </b> Firebase\JWT\SignatureInvalidException: Signature verification failed in /var/www/html/demo/vendor/firebase/php-jwt/src/JWT.php:128
+Stack trace:
+#0 /var/www/html/demo/ipn.php(139): Firebase\JWT\JWT::decode()
+#1 {main}</li>
+        <li class="list-group-item"> - 14:06:30 -   <b>IPN : </b> IPN Is hitting</li>
+        <li class="list-group-item"> - 14:06:30 -   <b>IPN : </b> IPN Is hitting <b>missingVerificationToken : </b> Verification-token is missing</li>
+        <li class="list-group-item"> - 14:06:35 -   <b>IPN : </b> IPN Is hitting</li>
+        <li class="list-group-item"> - 14:06:35 -   <b>IPN - Error : </b> Hash Data is not matched with subject <b>OrgMsgError : </b> Firebase\JWT\SignatureInvalidException: Signature verification failed in /var/www/html/demo/vendor/firebase/php-jwt/src/JWT.php:128
+Stack trace:
+#0 /var/www/html/demo/ipn.php(139): Firebase\JWT\JWT::decode()
+#1 {main}</li>
+        <li class="list-group-item"> - 14:09:25 -   <b>IPN : </b> IPN Is hitting</li>
+        <li class="list-group-item"> - 14:10:30 -   <b>IPN : </b> IPN Is hitting</li>
+        <li class="list-group-item"> - 14:10:30 -   <b>IPN - Error : </b> Hash Data is not matched with subject <b>OrgMsgError : </b> Firebase\JWT\SignatureInvalidException: Signature verification failed in /var/www/html/demo/vendor/firebase/php-jwt/src/JWT.php:128
+Stack trace:
+#0 /var/www/html/demo/ipn.php(139): Firebase\JWT\JWT::decode()
+#1 {main}</li>
+        <li class="list-group-item"> - 14:13:41 -   <b>IPN : </b> IPN Is hitting</li>
+        <li class="list-group-item"> - 14:13:41 -   <b>IPN - Error : </b> Hash Data is not matched with subject <b>OrgMsgError : </b> Firebase\JWT\SignatureInvalidException: Signature verification failed in /var/www/html/demo/vendor/firebase/php-jwt/src/JWT.php:128
+Stack trace:
+#0 /var/www/html/demo/ipn.php(139): Firebase\JWT\JWT::decode()
+#1 {main}</li>
+        <li class="list-group-item"> - 14:14:22 -   <b>IPN : </b> IPN Is hitting</li>
+        <li class="list-group-item"> - 14:15:16 -   <b>IPN : </b> IPN Is hitting</li>
+        <li class="list-group-item"> - 14:15:16 -   <b>IPN - Error : </b> Hash Data is not matched with subject <b>OrgMsgError : </b> Exception: IDS_Service_IpnController__E_VERIFICATION_FAILED_TAINTED_PAYLOAD in /var/www/html/demo/ipn.php:165
+Stack trace:
+#0 {main}</li>
+        <li class="list-group-item"> - 14:16:54 -   <b>IPN : </b> IPN Is hitting</li>
+        <li class="list-group-item"> - 14:16:54 -   <b>IPN - Error : </b> Hash Data is not matched with subject <b>OrgMsgError : </b> Exception: IDS_Service_IpnController__E_VERIFICATION_FAILED_TAINTED_PAYLOAD in /var/www/html/demo/ipn.php:165
+Stack trace:
+#0 {main}</li>
+        <li class="list-group-item"> - 15:36:56 -   <b>IPN : </b> IPN Is hitting</li>
+        <li class="list-group-item"> - 15:36:56 -   <b>IPN - Error : </b> Hash Data is not matched with subject <b>OrgMsgError : </b> Exception: IDS_Service_IpnController__E_VERIFICATION_FAILED_TAINTED_PAYLOAD in /var/www/html/demo/ipn.php:165
+Stack trace:
+#0 {main}</li>
+        <li class="list-group-item"> - 15:37:21 -   <b>IPN : </b> IPN Is hitting</li>
+        <li class="list-group-item"> - 15:37:21 -   <b>IPN - Error : </b> Hash Data is not matched with subject <b>OrgMsgError : </b> Exception: IDS_Service_IpnController__E_VERIFICATION_FAILED_TAINTED_PAYLOAD in /var/www/html/demo/ipn.php:165
+Stack trace:
+#0 {main}</li>
+        <li class="list-group-item"> - 15:37:51 -   <b>IPN : </b> IPN Is hitting</li>
+        <li class="list-group-item"> - 15:38:15 -   <b>IPN : </b> IPN Is hitting</li>
+        <li class="list-group-item"> - 10:42:29 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 10:42:29 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 10:42:29 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 10:42:29 -   <b>Step2 : </b> Set Params for Auturize <b>paReq : </b> Bsmt2wl30tVsNcMWJzPUMAXCKTfpPPcGy27cWwABeJcB9XiFy8czRKFgwSZbbXSLALR9dwXmSiJgrMkCFJGDdRQ= <b>backUrl : </b> http://35.204.43.65/demo/backAuth.php</li>
+        <li class="list-group-item"> - 10:42:31 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 10:42:35 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 10:42:35 -   <b>paRes : </b> myPT2m1s6A0go8_3P_Nho6XyANTY_ztgJE_qxNI2jwMWnmmUkWKl3xaI3g==</li>
+        <li class="list-group-item"> - 10:42:36 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
         

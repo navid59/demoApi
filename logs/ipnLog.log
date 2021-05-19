@@ -1,8 +1,218 @@
-304 - 10:51:37 -  | array(0) {
+932 - 13:46:41 -  | object(Firebase\JWT\SignatureInvalidException)#10 (7) {
+  ["message":protected]=>
+  string(29) "Signature verification failed"
+  ["string":"Exception":private]=>
+  string(0) ""
+  ["code":protected]=>
+  int(0)
+  ["file":protected]=>
+  string(54) "/var/www/html/demo/vendor/firebase/php-jwt/src/JWT.php"
+  ["line":protected]=>
+  int(128)
+  ["trace":"Exception":private]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["file"]=>
+      string(26) "/var/www/html/demo/ipn.php"
+      ["line"]=>
+      int(139)
+      ["function"]=>
+      string(6) "decode"
+      ["class"]=>
+      string(16) "Firebase\JWT\JWT"
+      ["type"]=>
+      string(2) "::"
+    }
+  }
+  ["previous":"Exception":private]=>
+  NULL
 }
-246 - 10:54:20 -  | array(0) {
+61 - 14:06:07 -  | object(Firebase\JWT\SignatureInvalidException)#10 (7) {
+  ["message":protected]=>
+  string(29) "Signature verification failed"
+  ["string":"Exception":private]=>
+  string(0) ""
+  ["code":protected]=>
+  int(0)
+  ["file":protected]=>
+  string(54) "/var/www/html/demo/vendor/firebase/php-jwt/src/JWT.php"
+  ["line":protected]=>
+  int(128)
+  ["trace":"Exception":private]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["file"]=>
+      string(26) "/var/www/html/demo/ipn.php"
+      ["line"]=>
+      int(139)
+      ["function"]=>
+      string(6) "decode"
+      ["class"]=>
+      string(16) "Firebase\JWT\JWT"
+      ["type"]=>
+      string(2) "::"
+    }
+  }
+  ["previous":"Exception":private]=>
+  NULL
 }
-427 - 10:54:36 -  | array(0) {
+946 - 14:06:35 -  | object(Firebase\JWT\SignatureInvalidException)#10 (7) {
+  ["message":protected]=>
+  string(29) "Signature verification failed"
+  ["string":"Exception":private]=>
+  string(0) ""
+  ["code":protected]=>
+  int(0)
+  ["file":protected]=>
+  string(54) "/var/www/html/demo/vendor/firebase/php-jwt/src/JWT.php"
+  ["line":protected]=>
+  int(128)
+  ["trace":"Exception":private]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["file"]=>
+      string(26) "/var/www/html/demo/ipn.php"
+      ["line"]=>
+      int(139)
+      ["function"]=>
+      string(6) "decode"
+      ["class"]=>
+      string(16) "Firebase\JWT\JWT"
+      ["type"]=>
+      string(2) "::"
+    }
+  }
+  ["previous":"Exception":private]=>
+  NULL
 }
-679 - 10:54:47 -  | array(0) {
+854 - 14:10:30 -  | object(Firebase\JWT\SignatureInvalidException)#10 (7) {
+  ["message":protected]=>
+  string(29) "Signature verification failed"
+  ["string":"Exception":private]=>
+  string(0) ""
+  ["code":protected]=>
+  int(0)
+  ["file":protected]=>
+  string(54) "/var/www/html/demo/vendor/firebase/php-jwt/src/JWT.php"
+  ["line":protected]=>
+  int(128)
+  ["trace":"Exception":private]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["file"]=>
+      string(26) "/var/www/html/demo/ipn.php"
+      ["line"]=>
+      int(139)
+      ["function"]=>
+      string(6) "decode"
+      ["class"]=>
+      string(16) "Firebase\JWT\JWT"
+      ["type"]=>
+      string(2) "::"
+    }
+  }
+  ["previous":"Exception":private]=>
+  NULL
+}
+679 - 14:13:41 -  | object(Firebase\JWT\SignatureInvalidException)#10 (7) {
+  ["message":protected]=>
+  string(29) "Signature verification failed"
+  ["string":"Exception":private]=>
+  string(0) ""
+  ["code":protected]=>
+  int(0)
+  ["file":protected]=>
+  string(54) "/var/www/html/demo/vendor/firebase/php-jwt/src/JWT.php"
+  ["line":protected]=>
+  int(128)
+  ["trace":"Exception":private]=>
+  array(1) {
+    [0]=>
+    array(5) {
+      ["file"]=>
+      string(26) "/var/www/html/demo/ipn.php"
+      ["line"]=>
+      int(139)
+      ["function"]=>
+      string(6) "decode"
+      ["class"]=>
+      string(16) "Firebase\JWT\JWT"
+      ["type"]=>
+      string(2) "::"
+    }
+  }
+  ["previous":"Exception":private]=>
+  NULL
+}
+168 - 14:15:16 -  | object(Exception)#8 (7) {
+  ["message":protected]=>
+  string(64) "IDS_Service_IpnController__E_VERIFICATION_FAILED_TAINTED_PAYLOAD"
+  ["string":"Exception":private]=>
+  string(0) ""
+  ["code":protected]=>
+  int(268435718)
+  ["file":protected]=>
+  string(26) "/var/www/html/demo/ipn.php"
+  ["line":protected]=>
+  int(165)
+  ["trace":"Exception":private]=>
+  array(0) {
+  }
+  ["previous":"Exception":private]=>
+  NULL
+}
+496 - 14:16:54 -  | object(Exception)#8 (7) {
+  ["message":protected]=>
+  string(64) "IDS_Service_IpnController__E_VERIFICATION_FAILED_TAINTED_PAYLOAD"
+  ["string":"Exception":private]=>
+  string(0) ""
+  ["code":protected]=>
+  int(268435718)
+  ["file":protected]=>
+  string(26) "/var/www/html/demo/ipn.php"
+  ["line":protected]=>
+  int(165)
+  ["trace":"Exception":private]=>
+  array(0) {
+  }
+  ["previous":"Exception":private]=>
+  NULL
+}
+811 - 15:36:56 -  | object(Exception)#8 (7) {
+  ["message":protected]=>
+  string(64) "IDS_Service_IpnController__E_VERIFICATION_FAILED_TAINTED_PAYLOAD"
+  ["string":"Exception":private]=>
+  string(0) ""
+  ["code":protected]=>
+  int(268435718)
+  ["file":protected]=>
+  string(26) "/var/www/html/demo/ipn.php"
+  ["line":protected]=>
+  int(165)
+  ["trace":"Exception":private]=>
+  array(0) {
+  }
+  ["previous":"Exception":private]=>
+  NULL
+}
+675 - 15:37:21 -  | object(Exception)#8 (7) {
+  ["message":protected]=>
+  string(64) "IDS_Service_IpnController__E_VERIFICATION_FAILED_TAINTED_PAYLOAD"
+  ["string":"Exception":private]=>
+  string(0) ""
+  ["code":protected]=>
+  int(268435718)
+  ["file":protected]=>
+  string(26) "/var/www/html/demo/ipn.php"
+  ["line":protected]=>
+  int(165)
+  ["trace":"Exception":private]=>
+  array(0) {
+  }
+  ["previous":"Exception":private]=>
+  NULL
 }
