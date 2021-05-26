@@ -1,7 +1,7 @@
 <?php
 require_once("config/config.php");
 
-$_SESSION["apiKey"] = $trader[0]['apiKey']; 
+$_SESSION["apiKey"] = getenv('TRADER_apiKey');
 $prices = array_column($products, 'pPrice');
 // die();
 ?>
@@ -56,7 +56,7 @@ $prices = array_column($products, 'pPrice');
               <div class="input-group-prepend">
                   <span class="input-group-text">API Key</span>
               </div>
-              <input type="text" class="form-control" id="apiKey" name="apiKey" placeholder="String - Length(0-255)" value="<?=$trader[0]['apiKey'];?>" required>
+              <input type="text" class="form-control" id="apiKey" name="apiKey" placeholder="String - Length(0-255)" value="<?=$_SESSION["apiKey"]?>" required>
               <div class="invalid-feedback" style="width: 100%;">
                   API Key is required.
               </div>
@@ -73,7 +73,7 @@ $prices = array_column($products, 'pPrice');
         </div>
         <div class="col-md-6 mb-3">
           <label for="posSignature">pos Signature</label>
-          <input type="text" class="form-control" id="posSignature" name="posSignature" placeholder="" value="<?=$trader[0]['posSignature'];?>" required>
+          <input type="text" class="form-control" id="posSignature" name="posSignature" placeholder="" value="<?=getenv('TRADER_posSignature');?>" required>
           <div class="invalid-feedback">
             Valid posSignature is required.
           </div>
@@ -123,7 +123,7 @@ $prices = array_column($products, 'pPrice');
 
       <div class="mb-3">
         <label for="notifyUrl">notify Url (IPN)</label>
-        <input type="text" class="form-control" id="notifyUrl" name="notifyUrl" value="<?=$trader[0]['notifyUrl'];?>" placeholder="Enter IPN URL" required>
+        <input type="text" class="form-control" id="notifyUrl" name="notifyUrl" value="<?=getenv('TRADER_notifyUrl');?>" placeholder="Enter IPN URL" required>
         <div class="invalid-feedback">
           Please enter your notify Url.
         </div>
@@ -131,7 +131,7 @@ $prices = array_column($products, 'pPrice');
 
       <div class="mb-3">
         <label for="redirectUrl">redirect Url<span class="text-muted"></span></label>
-        <input type="text" class="form-control" id="redirectUrl" name="redirectUrl"  value="<?=$trader[0]['redirectUrl'];?>" placeholder="Enter Confirm URL">
+        <input type="text" class="form-control" id="redirectUrl" name="redirectUrl"  value="<?=getenv('TRADER_redirectUrl');?>" placeholder="Enter Confirm URL">
       </div>
 
       <div class="row">
@@ -429,15 +429,6 @@ $prices = array_column($products, 'pPrice');
         <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
         <hr>
         <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
-      </div>
-    </div>
-    <hr class="mb-4">   
-    <div class="panel panel-primary" id="result_panel">
-      <div class="panel-heading">
-        <h3 class="panel-title">Real time Log</h3>
-      </div>
-      <div class="list-group">
-        <span id="containerDiv">Real Time Log</span>
       </div>
     </div>
   </div>

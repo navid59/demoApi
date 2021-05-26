@@ -1,7 +1,8 @@
 {
     "require": {
         "firebase/php-jwt": "^5.2",
-        "nesbot/carbon": "^2.48"
+        "vlucas/phpdotenv": "^2.4",
+        "league/commonmark": "^1.6"
     },
     "autoload": {
         "psr-4": {

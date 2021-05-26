@@ -13,7 +13,7 @@ $prices = array_column($products, 'pPrice');
                 <div class="input-group-prepend">
                     <span class="input-group-text">API Key</span>
                 </div>
-                <input type="text" class="form-control" id="apiKey" name="apiKey" placeholder="String - Length(0-255)" value="<?=$trader[0]['apiKey'];?>" required disabled>
+                <input type="text" class="form-control" id="apiKey" name="apiKey" placeholder="String - Length(0-255)" value="<?=$_SESSION["apiKey"];?>" required disabled>
                 <div class="invalid-feedback" style="width: 100%;">
                     API Key is required.
                 </div>

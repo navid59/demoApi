@@ -29,21 +29,22 @@ class request extends start{
                 $_SESSION['authenticationToken'] = $resultObj->data->customerAction->authenticationToken;
                 $_SESSION['ntpID'] = $resultObj->data->payment->ntpID;
 
+                
                 $authorize = new authorize();
                 $paReq   = $resultObj->data->customerAction->formData->paReq;
                 $backUrl = "http://35.204.43.65/demo/backAuth.php"; //bank::validateBackUrl($resultObj->data->customerAction->formData->backUrl);
                 $bankUrl = bank::validateBackUrl($resultObj->data->customerAction->url);
                 
                 
-                if($authorize->setParam($paReq,$backUrl)){
-                    // echo "<script type='text/javascript'>doRedirectSandboxAuthorize('$backUrl', '$paReq');</script>";
-                    // echo "<script type='text/javascript'>doRedirectSandboxAuthorize();</script>";
-                    // $resultAuthorize = $authorize->doRedirect();
-                    // print_r($resultAuthorize);
-                    // die('Choos');
-                } else {
-                    throw new \Exception("Parameters are not set for Authorize!!!, do Something for error Handeling");
-                }
+                // if($authorize->setParam($paReq,$backUrl)){
+                //     // echo "<script type='text/javascript'>doRedirectSandboxAuthorize('$backUrl', '$paReq');</script>";
+                //     // echo "<script type='text/javascript'>doRedirectSandboxAuthorize();</script>";
+                //     // $resultAuthorize = $authorize->doRedirect();
+                //     // print_r($resultAuthorize);
+                //     // die('1');
+                // } else {
+                //     throw new \Exception("Parameters are not set for Authorize!!!, do Something for error Handeling");
+                // }
                 
                 
                 break;
@@ -72,7 +73,6 @@ class request extends start{
 
     // Send request json
     protected function sendRequest($jsonStr) {
-      // print_r($jsonStr);
 
       $url = 'https://secure.sandbox.netopia-payments.com/payment/card/start';
       $ch = curl_init($url);
@@ -85,7 +85,7 @@ class request extends start{
 
       // Set the content type to application/json
       curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type : application/json'));
-      curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization : Uxf3OY--rDK3Qae8CiJJUlAcuRJFp7tzGY4M8KocQaCGyfEqUGhGskv0'));
+      curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization : '.$_SESSION['apiKey']));
 
       // Return response instead of outputting
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

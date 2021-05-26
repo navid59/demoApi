@@ -29,17 +29,6 @@ $(document).ready(() => {
   getReturnLog(); // Real time Log success Page
 });
 
-// $('#doPayment').click(function(){
-//   alert("Something And now Ajax");
-//   $.ajax({
-//       type: 'post',
-//       url: 'post.php',
-//       data: $('form').serialize(),
-//       success: function () {
-//       alert('form was submitted');
-//       }
-//   });
-// });
 
 $(function () {
   $('#checkoutForm').on('submit', function (e) {
@@ -146,5 +135,49 @@ function getReturnLog() {
           $("#containerDivReturnLog").html(text);
           setTimeout(getReturnLog, 300000); // refresh every 3 seconds
       }
+  })
+}
+
+// Remove Logs file
+function cleanLogFile(logType) {
+  // alert("Log Type : "+logType);
+  $.ajax({
+    type: 'post',
+    url: 'http://35.204.43.65/demo/clearLog.php',
+    data: {'logType': logType},
+    success: function(response) {
+      response = JSON.parse(response);
+      if(response.status){
+        if(logType ==1 ){
+          $('#logMessage-success').show();
+          $('#logSuccessMessage').html(response.msg);
+          $('#logMessage-warning').hide();
+        }
+
+        if(logType ==2 ){
+          $('#ipnLogMessage-success').show();
+          $('#ipnLogSuccessMessage').html(response.msg);
+          $('#ipnLogMessage-warning').hide();
+        }
+        
+      }else{
+        if(logType ==1 ){
+          $('#logMessage-success').hide();
+          $('#logMessage-warning').show();
+          $('#logWarningMessage').html(response.msg);
+        }
+
+        if(logType ==2 ){
+          $('#ipnLogMessage-success').hide();
+          $('#ipnLogMessage-warning').show();
+          $('#ipnLogWarningMessage').html(response.msg);
+        }
+        
+      }
+    },
+    error: function (response) {
+      alert("Log Ajax Not Worked");
+      console.log(response);
+    }
   })
 }

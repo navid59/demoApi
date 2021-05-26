@@ -2,6 +2,7 @@
 include_once('lib/log.php');
 include_once("config/config.php");
 session_start();
+
 class verifyAuth {
     public $apiKey;
     public $authenticationToken;

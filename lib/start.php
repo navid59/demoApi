@@ -2,7 +2,7 @@
 class start {
     protected $startJson;
 
-    function __construct(){        
+    function __construct(){
     }
 
     protected function setConfig() {

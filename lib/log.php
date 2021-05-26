@@ -1,8 +1,7 @@
 <?php 
 class log {
-    protected $logCode;
-
-    function __construct(){        
+    
+    function __construct(){
     }
 
     static function setLog($code, $log, $arrLog) {
@@ -19,10 +18,16 @@ class log {
                 self::setBackendLog($log);
         }
     }
-    // to show logs
-    public function getLogContent() {
-        $file='/var/www/html/demo/logs/api.log';
-        # do Something
+
+    // to clean logs file
+    static function cleanLogFile($fileName) {
+        $logPath = 'logs/'.$fileName.'.log';
+        if(file_exists($logPath)){
+            file_put_contents($logPath, "");
+            return true;
+        }else{
+            return false;
+        }
     }
 
     static function setBackendLog($log) {

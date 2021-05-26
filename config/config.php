@@ -1,4 +1,12 @@
 <?php
+/**
+ * include i18n class and initialize it
+ * init object will load language files and parse them .
+ **/ 
+require_once 'lib/i18n.class.php';
+$i18n = new i18n('assets/lang/lang_en.json', 'assets/lang/cache', 'en');
+$i18n->init();
+
 $products = array(
     array(
         'id' => 1,
@@ -38,15 +46,15 @@ $products = array(
     )
 );
 
-$trader = array(
-    array(
-        'id'            => 1,
-        'posSignature'  => 'LXTP-3WDM-WVXL-GC8B-Y5DA',
-        'notifyUrl'     => 'http://35.204.43.65/demo/ipn.php',
-        'redirectUrl'   => 'http://35.204.43.65/demo/return.php',
-        'apiKey'        => 'Uxf3OY--rDK3Qae8CiJJUlAcuRJFp7tzGY4M8KocQaCGyfEqUGhGskv0'
-    ),
-);
+// $trader = array(
+//     array(
+//         'id'            => 1,
+//         'posSignature'  => 'LXTP-3WDM-WVXL-GC8B-Y5DA',
+//         'notifyUrl'     => 'http://35.204.43.65/demo/ipn.php',
+//         'redirectUrl'   => 'http://35.204.43.65/demo/return.php',
+//         'apiKey'        => 'Uxf3OY--rDK3Qae8CiJJUlAcuRJFp7tzGY4M8KocQaCGyfEqUGhGskv0'
+//     ),
+// );
 
 $billingShippingInfo = array(
     array(
