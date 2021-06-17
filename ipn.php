@@ -30,10 +30,10 @@ const ERROR_TYPE_PERMANENT 	= 0x02;
  * available statuses for the purchase class (prcStatus)
  */
 const STATUS_NEW 									= 1;	//0x01; //new purchase status
-const STATUS_OPENED 								= 2;	//0x02; // specific to Model_Purchase_Card purchases (after preauthorization) and Model_Purchase_Cash
-const STATUS_PAID 									= 3;	//0x03; // capturate (card)
+const STATUS_OPENED 								= 2;	//OK //0x02; // specific to Model_Purchase_Card purchases (after preauthorization) and Model_Purchase_Cash
+const STATUS_PAID 									= 3;	//OK //0x03; // capturate (card)
 const STATUS_CANCELED 								= 4;	//0x04; // void
-const STATUS_CONFIRMED 								= 5;	//0x05; //confirmed status (after IPN)
+const STATUS_CONFIRMED 								= 5;	//OK //0x05; //confirmed status (after IPN)
 const STATUS_PENDING 								= 6;	//0x06; //pending status
 const STATUS_SCHEDULED 								= 7;	//0x07; //scheduled status, specific to Model_Purchase_Sms_Online / Model_Purchase_Sms_Offline
 const STATUS_CREDIT 								= 8;	//0x08; //specific status to a capture & refund state
@@ -53,11 +53,17 @@ const STATUS_TRIAL_PENDING							= 21;	//0x15; //specific to Model_Purchase_Sms_
 const STATUS_TRIAL									= 22;	//0x16; //specific to Model_Purchase_Sms_Online; trial period has started
 const STATUS_EXPIRED								= 23;	//0x17; //cancel a not payed purchase 
 
+// const STATUS_SENT_TO_PROCESSOR                      = null;  // Ask from Claudiu / Alex - DELETE 
+// const STATUS_ACCEPTED                               = null;  // Ask from Claudiu / Alex - DELETE
+
 // Log
 $setRealTimeLog = ["IPN"    =>  "IPN Is hitting"];
 log::setRealTimeLog($setRealTimeLog);
 
 $aHeaders = apache_request_headers();
+log::setIpnLog($aHeaders);
+log::setIpnLog($_REQUEST);
+
 if(!is_array($aHeaders))
 {
     $setRealTimeLog['missingHeader'] = "headers are missing";
@@ -96,6 +102,15 @@ if (file_exists($publickKeyFilePath)) {
         log::setRealTimeLog($setRealTimeLog);
         exit;
     }
+    /**
+     * Default IPN response, 
+     * will change if there is any problem
+     */
+    $outputData = array(
+        'errorType'		=> ERROR_TYPE_NONE,
+        'errorCode' 	=> null,
+        'errorMessage'	=> ''
+    );
 } else {
     $setRealTimeLog['missingPublicKey'] = "The public key $publickKeyFilePath does not exist"; 
     echo $setRealTimeLog['missingPublicKey'];
@@ -107,11 +122,7 @@ if (file_exists($publickKeyFilePath)) {
 $HTTP_RAW_POST_DATA = file_get_contents('php://input');
 $input = json_decode($HTTP_RAW_POST_DATA);
 
-/**
- * NOTE
- * Ask from Claudiu / Alex
- * 1- JWT::decode is NOT OK
- */
+
 
  /**
   * Analising verification token
@@ -135,11 +146,11 @@ $input = json_decode($HTTP_RAW_POST_DATA);
 try {
     JWT::$timestamp = time() * 1000;
 
-    // IS NOT VERIFIED - Start - ASK Alex//
+   /**
+    * Decode from JWT
+    */
     $objJwt = JWT::decode($verificationToken, $publicKey, array($jwtAlgorithm));
-    // $objJwt = JWT::decode($verificationToken, $myKey, array($jwtAlgorithm));
-    // IS NOT VERIFIED - End - ASK ALEX //
-     die(print_r($objJwt));
+
     if(strcmp($objJwt->iss, 'NETOPIA Payments') != 0)
 	    {
         throw new \Exception('IDS_Service_IpnController__E_VERIFICATION_FAILED_GENERAL');
@@ -160,19 +171,134 @@ try {
     /**
 	 * check IPN data integrity
 	 */
+
 	if(strcmp($payloadHash, $objJwt->sub) != 0)
 	{
         throw new \Exception('IDS_Service_IpnController__E_VERIFICATION_FAILED_TAINTED_PAYLOAD', E_VERIFICATION_FAILED_TAINTED_PAYLOAD);
     }
+
+    try
+	{
+        $objIpn = json_decode($payload, false);
+        log::setIpnLog($objIpn);
+	}
+	catch(\Exception $e)
+	{
+		throw new \Exception('IDS_Service_IpnController__E_VERIFICATION_FAILED_PAYLOAD_FORMAT', E_VERIFICATION_FAILED_PAYLOAD_FORMAT);
+    }
     
-} catch (\Throwable $th) {
-    //throw $th;
+    switch($objIpn->payment->status)
+	{
+	case STATUS_NEW:
+	case STATUS_CHARGEBACK_INIT: // chargeback initiat
+	case STATUS_CHARGEBACK_ACCEPT: // chargeback acceptat
+	case STATUS_SCHEDULED:
+	case STATUS_3D_AUTH:
+	case STATUS_CHARGEBACK_REPRESENTMENT:
+	case STATUS_REVERSED:
+	case STATUS_PENDING_ANY:
+	case STATUS_PROGRAMMED_RECURRENT_PAYMENT:
+	case STATUS_CANCELED_PROGRAMMED_RECURRENT_PAYMENT:
+	case STATUS_TRIAL_PENDING: //specific to Model_Purchase_Sms_Online; wait for ACTON_TRIAL IPN to start trial period
+	case STATUS_TRIAL: //specific to Model_Purchase_Sms_Online; trial period has started
+	case STATUS_EXPIRED: //cancel a not payed purchase 
+	//case STATUS_ACCEPTED: // ??? Ask from Claudiu / Alex //accepted by processor (virtual status used for liosting purposes) 
+	//case STATUS_SENT_TO_PROCESSOR: // ??? Ask from Claudiu / Alex , what is This STATUS ????
+	case STATUS_OPENED: // preauthorizate (card)
+	case STATUS_PENDING:
+	case STATUS_ERROR: // error
+	case STATUS_DECLINED: // declined
+    case STATUS_FRAUD: // fraud
+        /**
+		 * payment status is in fraud, reviw the payment
+		 */
+        $orderLog = 'payment in reviwing';
+        log::setRealTimeLog($orderLog);
+    break;
+	case STATUS_PENDING_AUTH: // in asteptare de verificare pentru tranzactii autorizate
+		/**
+		 * update payment status, last modified date&time in your system
+		 */
+        $orderLog = 'update payment status, last modified date&time in your system';
+        log::setRealTimeLog($orderLog);
+    break;
+    
+	case STATUS_PAID: // capturate (card)
+	case STATUS_CONFIRMED:
+		/**
+		 * payment was confirmed; deliver goods
+		 */
+        $orderLog = 'payment was confirmed; deliver goods';
+        log::setRealTimeLog($orderLog);
+    break;
+    
+	case STATUS_CREDIT: // capturate si apoi refund
+		/**
+		 * a previously confirmed payment eas refinded; cancel goods delivery
+		 */
+        $orderLog = 'a previously confirmed payment eas refinded; cancel goods delivery';
+        log::setRealTimeLog($orderLog);
+    break;
+    
+	case STATUS_CANCELED: // void
+		/**
+		 * payment was cancelled; do not deliver goods
+		 */
+        $orderLog = 'payment was cancelled; do not deliver goods';
+        log::setRealTimeLog($orderLog);
+	break;
+	}
+    
+} catch(\Exception $e)
+{
+	$outputData['errorType']	= ERROR_TYPE_PERMANENT;
+	$outputData['errorCode']	= ($e->getCode() != 0) ? $e->getCode() : E_VERIFICATION_FAILED_GENERAL;
+    $outputData['errorMessage']	= $e->getMessage();
+    
     $setRealTimeLog = [
-                        "IPN - Error"  =>  "Hash Data is not matched with subject",
-                        "OrgMsgError"  => $th
-                        ];
-    log::setIpnLog($setRealTimeLog['OrgMsgError']);
+                    "IPN - Error"  =>  "Hash Data is not matched with subject",
+                    "ipnMsgError"  => 'ERROR_TYPE_PERMANENT -> E_VERIFICATION_FAILED_GENERAL'
+                    ];
+    log::setIpnLog($setRealTimeLog['ipnMsgError']);
     log::setRealTimeLog($setRealTimeLog);
-    die(print_r($th));
 }
+
+/**
+ * IPN Output
+ */
+echo json_encode($outputData);
+
+# -------------------------- # 
+# Temporary Error Handeling  #
+# -------------------------- #
+// catch (\Throwable $th) {
+//     die(print_r($th));
+// }
+
+//// More specific Catch - Start ////////
+// catch(IpnException $e)
+// {
+// 	$outputData['errorType']	= $e->getErrorType();
+// 	$outputData['errorCode']	= $e->getCode();
+// 	$outputData['errorMessage']	= $e->getMessage();
+// }
+// catch(SignatureInvalidException $e)
+// {
+// 	$outputData['errorType']	= ERROR_TYPE_PERMANENT;
+// 	$outputData['errorCode']	= E_VERIFICATION_FAILED_SIGNATURE;
+// 	$outputData['errorMessage']	= $e->getMessage();
+// }
+// catch(BeforeValidException $e)
+// {
+// 	$outputData['errorType']	= ERROR_TYPE_PERMANENT;
+// 	$outputData['errorCode']	= E_VERIFICATION_FAILED_NBF_IAT;
+// 	$outputData['errorMessage']	= $e->getMessage();
+// }
+// catch(ExpiredException $e)
+// {
+// 	$outputData['errorType']	= ERROR_TYPE_PERMANENT;
+// 	$outputData['errorCode']	= E_VERIFICATION_FAILED_EXPIRED;
+// 	$outputData['errorMessage']	= $e->getMessage();
+// }
+///// More specific Catch - End /////////
 

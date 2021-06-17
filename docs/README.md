@@ -1,6 +1,4 @@
-# UI Overview
-###### ( [feel free to get it from GitHub repository](https://github.com/mobilpay) )
-<!-- ![](assets/img/Demo01.png) -->
+<!-- ![](http://35.204.43.65/demo/assets/img/Demo01.png) -->
 ## Introduction
 A web base example in pure php to simply show how NETOPIA Payments API works and can be implemented in your project, without using any kind of framework ,...
 
@@ -9,15 +7,16 @@ A web base example in pure php to simply show how NETOPIA Payments API works and
 ### API URL
 <https://secure.sandbox.netopia-payments.com/>
 
+
 ### API Actions
 * #### **Start the transaction**
         
-    To start the transaction you will need to send your request to **START** action and then depend on response continue the process
+    To start the transaction you will need to send your request to **START** end point, then depend on response continue the process
     * **Action structure:** The START action has tree main part        
         * **Config:**  to configuration your IPN URL, Return URL, Email notification template, Email notification language
         * **Payment:** to set payment method and card informations
         * **Order:** to set order details
-    * **URL:** /payment/card/start
+    * **Action URL:** /payment/card/start
     * **Method:** `POST`    
     * **Params:**
 
@@ -79,12 +78,6 @@ A web base example in pure php to simply show how NETOPIA Payments API works and
 ## Installation
 
 ---
-
-
-
-
-##### Note / Suggestions
-* if there is issue with namespace in your platform , you can solve it by getting help from Service Providers. 
-for ex. in Laravel you can define a provider and put in your vendor and then set your namespace from the composer.json
-
-* if in any case the Country , City , Zip code , ... is separated from the Address in your application , please merge it with Address and create full address for Billing/Shipping address.
+##### Resources
+###### ( <a href="https://github.com/mobilpay" target="_blank">feel free to get it from GitHub repository</a> )
+###### ( <a href="https://documenter.postman.com/preview/4914690-b18061f3-e352-4d30-a4f5-1195dcfc40e7?environment=&versionTag=latest&apiName=CURRENT&version=latest&documentationLayout=classic-double-column&right-sidebar=303030&top-bar=FFFFFF&highlight=EF5B25" target="_blank">see API examples in different programming languages</a> )

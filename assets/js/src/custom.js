@@ -78,6 +78,14 @@ $(function () {
         }else{
           $('#message-success').hide();
           $('#message-info').hide();
+
+          /**
+           * assign error message to view
+           */
+          $('#msg-warning-title').html(response.message);
+          $('#warning-status-msg').html('Your request is failed');
+          $('#warning-type-code').html('the type of your error is :'+response.code);
+          $('#warning-full-msg').html(response.data.message);
           $('#message-warning').show();
         }
       },

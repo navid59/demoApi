@@ -10,6 +10,7 @@ class request extends start{
       $jsonRequest = $this->setRequest();
       $result = $this->sendRequest($jsonRequest);
       print_r($result);
+    //   die('11111111');
        
 
       $resultObj = json_decode($result);
@@ -49,14 +50,16 @@ class request extends start{
                 
                 break;
             case 0:
-                $this->setLog("Cred ca Card nu este 3DS");
+                $this->setLog("Card has no 3DS");
                 break;
             default:
                 $this->setLog($resultObj->data->error->code ." -> ".$resultObj->data->error->message);
         }
       }else {
-        throw new \Exception("Status is not 1, do Something for error Handeling");
-        // die("Status is not 1, do Something for error Handeling");
+        /**
+         * There is an error / problem
+         * the message error is handeling in UI, by bootstrap Alert
+         */
       }
     }
 
