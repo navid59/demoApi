@@ -2,8 +2,10 @@
 require_once("config/config.php");
 
 $_SESSION["apiKey"] = getenv('TRADER_apiKey');
+
+/** Simulate product price */
 $prices = array_column($products, 'pPrice');
-// die();
+
 ?>
 <div class="row" style="padding-top:15px;">
   <div class="col-md-4 order-md-2 mb-4">

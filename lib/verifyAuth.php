@@ -1,7 +1,7 @@
 <?php
 include_once('lib/log.php');
 include_once("config/config.php");
-session_start();
+// session_start();
 
 class verifyAuth {
     public $apiKey;
@@ -11,19 +11,6 @@ class verifyAuth {
         $this->apiKey = $_SESSION['apiKey'];
         $this->authenticationToken = $_SESSION['authenticationToken'];
         $this->ntpID = $_SESSION['ntpID'];
-
-        // /**
-        //  * Set params for /payment/card/verify-auth
-        //  * Format Json
-        //  */
-        // $jsonAuthParam = $this->setVerifyAuth();
-
-        // /**
-        //  * Send request to /payment/card/verify-auth
-        //  */
-        // $paymentResult = $this->sendRequestVerifyAuth($jsonAuthParam);
-        // // print_r ($paymentResult);
-        // return ($paymentResult);
     }
 
     public function setVerifyAuth() {
@@ -39,9 +26,7 @@ class verifyAuth {
     }
 
     // Send request to /payment/card/verify-auth
-    public function sendRequestVerifyAuth($jsonStr) {
-        // print_r($jsonStr);
-    
+    public function sendRequestVerifyAuth($jsonStr) {  
         $url = 'https://secure.sandbox.netopia-payments.com/payment/card/verify-auth';
         $ch = curl_init($url);
     

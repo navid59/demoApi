@@ -9,12 +9,9 @@ class request extends start{
     function __construct(){
       $jsonRequest = $this->setRequest();
       $result = $this->sendRequest($jsonRequest);
-      print_r($result);
-    //   die('11111111');
-       
+      print_r($result);       
 
       $resultObj = json_decode($result);
-    //   echo $resultObj->message;
       if($resultObj->status){
         switch ($resultObj->data->error->code) {
             case 100:
@@ -30,24 +27,10 @@ class request extends start{
                 $_SESSION['authenticationToken'] = $resultObj->data->customerAction->authenticationToken;
                 $_SESSION['ntpID'] = $resultObj->data->payment->ntpID;
 
-                
                 $authorize = new authorize();
                 $paReq   = $resultObj->data->customerAction->formData->paReq;
                 $backUrl = "http://35.204.43.65/demo/backAuth.php"; //bank::validateBackUrl($resultObj->data->customerAction->formData->backUrl);
                 $bankUrl = bank::validateBackUrl($resultObj->data->customerAction->url);
-                
-                
-                // if($authorize->setParam($paReq,$backUrl)){
-                //     // echo "<script type='text/javascript'>doRedirectSandboxAuthorize('$backUrl', '$paReq');</script>";
-                //     // echo "<script type='text/javascript'>doRedirectSandboxAuthorize();</script>";
-                //     // $resultAuthorize = $authorize->doRedirect();
-                //     // print_r($resultAuthorize);
-                //     // die('1');
-                // } else {
-                //     throw new \Exception("Parameters are not set for Authorize!!!, do Something for error Handeling");
-                // }
-                
-                
                 break;
             case 0:
                 $this->setLog("Card has no 3DS");

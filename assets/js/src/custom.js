@@ -40,7 +40,7 @@ $(function () {
       // data: $('form').serialize(),
       data: $('#checkoutForm').serialize(),
       success: function (response) {
-        alert('form was submitted');
+        console.log('form was submitted');
         
         $('#message').show();
         response = JSON.parse(response);
@@ -66,15 +66,11 @@ $(function () {
              * preparing for redirect
              */
             var backUrl = "http://35.204.43.65/demo/backAuth.php";
-            doRedirectSandboxAuthorize(response.data.customerAction.formData.paReq, backUrl);
-            
-            // #3 Next step is ) Payment/Card/Verify-auth
-            
+            doRedirectSandboxAuthorize(response.data.customerAction.formData.paReq, backUrl);            
           }else {
             $('#authenticationToken').val(response.data.customerAction.authenticationToken);
             $('#conclusionMsg').append('<li>Your card dosn\'t have 3DS!!!</li>');
           }
-          
         }else{
           $('#message-success').hide();
           $('#message-info').hide();
@@ -90,7 +86,7 @@ $(function () {
         }
       },
       error: function (response) {
-        alert("NOT SEND AJAX");
+        console.log("NOT SEND AJAX");
         $('#message').show();
         $('#message-warning').show();
         

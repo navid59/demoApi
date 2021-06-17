@@ -4,8 +4,13 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 include_once('lib/log.php');
 
-// chdir(dirname(dirname(dirname(dirname(__FILE__)))));
 require_once 'vendor/autoload.php';
+
+/**
+ * Load .env 
+ */
+$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv->load();
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\SignatureInvalidException;
@@ -53,9 +58,6 @@ const STATUS_TRIAL_PENDING							= 21;	//0x15; //specific to Model_Purchase_Sms_
 const STATUS_TRIAL									= 22;	//0x16; //specific to Model_Purchase_Sms_Online; trial period has started
 const STATUS_EXPIRED								= 23;	//0x17; //cancel a not payed purchase 
 
-// const STATUS_SENT_TO_PROCESSOR                      = null;  // Ask from Claudiu / Alex - DELETE 
-// const STATUS_ACCEPTED                               = null;  // Ask from Claudiu / Alex - DELETE
-
 // Log
 $setRealTimeLog = ["IPN"    =>  "IPN Is hitting"];
 log::setRealTimeLog($setRealTimeLog);
@@ -78,8 +80,6 @@ foreach($aHeaders as $headerName=>$headerValue)
 	if(strcasecmp('Verification-token', $headerName) == 0)
 	{
         $verificationToken = $headerValue;
-        // $verificationToken = base64_encode($verificationToken);
-        // $verificationToken = base64_decode($verificationToken);
 		break;
 	}
 }
@@ -157,12 +157,11 @@ try {
         exit;
         }
 
-    /**
-     * Commentari from @Claudiu to @Navid
-	 * $objJwt->aud = seller account signature that you used for current payment; 
-	 * do whatever you need to do with this info
-	 */
-         
+    if(empty($objJwt->aud) || $objJwt->aud != getenv('TRADER_posSignature')){
+        throw new \Exception('IDS_Service_IpnController__INVALID_SIGNATURE');
+        exit;
+    }
+        
     $payload = $HTTP_RAW_POST_DATA;
     /**
 	 * validate payload
@@ -202,8 +201,6 @@ try {
 	case STATUS_TRIAL_PENDING: //specific to Model_Purchase_Sms_Online; wait for ACTON_TRIAL IPN to start trial period
 	case STATUS_TRIAL: //specific to Model_Purchase_Sms_Online; trial period has started
 	case STATUS_EXPIRED: //cancel a not payed purchase 
-	//case STATUS_ACCEPTED: // ??? Ask from Claudiu / Alex //accepted by processor (virtual status used for liosting purposes) 
-	//case STATUS_SENT_TO_PROCESSOR: // ??? Ask from Claudiu / Alex , what is This STATUS ????
 	case STATUS_OPENED: // preauthorizate (card)
 	case STATUS_PENDING:
 	case STATUS_ERROR: // error
@@ -267,38 +264,4 @@ try {
  * IPN Output
  */
 echo json_encode($outputData);
-
-# -------------------------- # 
-# Temporary Error Handeling  #
-# -------------------------- #
-// catch (\Throwable $th) {
-//     die(print_r($th));
-// }
-
-//// More specific Catch - Start ////////
-// catch(IpnException $e)
-// {
-// 	$outputData['errorType']	= $e->getErrorType();
-// 	$outputData['errorCode']	= $e->getCode();
-// 	$outputData['errorMessage']	= $e->getMessage();
-// }
-// catch(SignatureInvalidException $e)
-// {
-// 	$outputData['errorType']	= ERROR_TYPE_PERMANENT;
-// 	$outputData['errorCode']	= E_VERIFICATION_FAILED_SIGNATURE;
-// 	$outputData['errorMessage']	= $e->getMessage();
-// }
-// catch(BeforeValidException $e)
-// {
-// 	$outputData['errorType']	= ERROR_TYPE_PERMANENT;
-// 	$outputData['errorCode']	= E_VERIFICATION_FAILED_NBF_IAT;
-// 	$outputData['errorMessage']	= $e->getMessage();
-// }
-// catch(ExpiredException $e)
-// {
-// 	$outputData['errorType']	= ERROR_TYPE_PERMANENT;
-// 	$outputData['errorCode']	= E_VERIFICATION_FAILED_EXPIRED;
-// 	$outputData['errorMessage']	= $e->getMessage();
-// }
-///// More specific Catch - End /////////
 
