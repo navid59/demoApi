@@ -1,3 +1,1 @@
-certificates/*.cer
-certificates/*.key
-logs/*.log
+/certificates/
