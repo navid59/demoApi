@@ -4,10 +4,20 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 include_once __DIR__ . '/vendor/autoload.php';
+include_once('lib/netopiaSetting.php');
 include_once('lib/request.php');
 
+$setting = new netopiaSetting();
+
+$setting->posSignature = 'LXTP-3WDM-WVXL-GC8B-Y5DA'; // Shoud be array of key
+$setting->notifyUrl    = 'http://35.204.43.65/demo/ipn.php';
+$setting->redirectUrl  = 'http://35.204.43.65/demo/return.php';
+$setting->apiKey       = 'Uxf3OY--rDK3Qae8CiJJUlAcuRJFp7tzGY4M8KocQaCGyfEqUGhGskv0';
+
+$_SESSION['apiKey']    = $setting->apiKey; 
 /**
  * Load .env 
+ * To read Logo , ... from .env
  */
 $dotenv = new Dotenv\Dotenv(__DIR__);
 $dotenv->load();

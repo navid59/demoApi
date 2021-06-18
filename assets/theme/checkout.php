@@ -1,7 +1,7 @@
 <?php
 require_once("config/config.php");
 
-$_SESSION["apiKey"] = getenv('TRADER_apiKey');
+// $_SESSION["apiKey"] = $setting->apiKey;
 
 /** Simulate product price */
 $prices = array_column($products, 'pPrice');
@@ -58,7 +58,7 @@ $prices = array_column($products, 'pPrice');
               <div class="input-group-prepend">
                   <span class="input-group-text">API Key</span>
               </div>
-              <input type="text" class="form-control" id="apiKey" name="apiKey" placeholder="String - Length(0-255)" value="<?=$_SESSION["apiKey"]?>" required>
+              <input type="text" class="form-control" id="apiKey" name="apiKey" placeholder="String - Length(0-255)" value="<?=$setting->apiKey;?>" required>
               <div class="invalid-feedback" style="width: 100%;">
                   API Key is required.
               </div>
@@ -75,7 +75,7 @@ $prices = array_column($products, 'pPrice');
         </div>
         <div class="col-md-6 mb-3">
           <label for="posSignature">pos Signature</label>
-          <input type="text" class="form-control" id="posSignature" name="posSignature" placeholder="" value="<?=getenv('TRADER_posSignature');?>" required>
+          <input type="text" class="form-control" id="posSignature" name="posSignature" placeholder="" value="<?=$setting->posSignature;?>" required>
           <div class="invalid-feedback">
             Valid posSignature is required.
           </div>
@@ -125,7 +125,7 @@ $prices = array_column($products, 'pPrice');
 
       <div class="mb-3">
         <label for="notifyUrl">notify Url (IPN)</label>
-        <input type="text" class="form-control" id="notifyUrl" name="notifyUrl" value="<?=getenv('TRADER_notifyUrl');?>" placeholder="Enter IPN URL" required>
+        <input type="text" class="form-control" id="notifyUrl" name="notifyUrl" value="<?=$setting->notifyUrl;?>" placeholder="Enter IPN URL" required>
         <div class="invalid-feedback">
           Please enter your notify Url.
         </div>
@@ -133,7 +133,7 @@ $prices = array_column($products, 'pPrice');
 
       <div class="mb-3">
         <label for="redirectUrl">redirect Url<span class="text-muted"></span></label>
-        <input type="text" class="form-control" id="redirectUrl" name="redirectUrl"  value="<?=getenv('TRADER_redirectUrl');?>" placeholder="Enter Confirm URL">
+        <input type="text" class="form-control" id="redirectUrl" name="redirectUrl"  value="<?=$setting->redirectUrl;?>" placeholder="Enter Confirm URL">
       </div>
 
       <div class="row">

@@ -1,6 +1,7 @@
 <?php 
-require_once("config/config.php");
-$prices = array_column($products, 'pPrice');
+session_start();
+// require_once("config/config.php");
+// $prices = array_column($products, 'pPrice');
 // die();
 ?>
 <div class="col" style="padding-top:15px;">

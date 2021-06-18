@@ -46,15 +46,6 @@ $products = array(
     )
 );
 
-// $trader = array(
-//     array(
-//         'id'            => 1,
-//         'posSignature'  => 'LXTP-3WDM-WVXL-GC8B-Y5DA',
-//         'notifyUrl'     => 'http://35.204.43.65/demo/ipn.php',
-//         'redirectUrl'   => 'http://35.204.43.65/demo/return.php',
-//         'apiKey'        => 'Uxf3OY--rDK3Qae8CiJJUlAcuRJFp7tzGY4M8KocQaCGyfEqUGhGskv0'
-//     ),
-// );
 
 $billingShippingInfo = array(
     array(

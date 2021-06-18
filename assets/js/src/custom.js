@@ -65,7 +65,7 @@ $(function () {
              * Step 2) Sandbox/Auton
              * preparing for redirect
              */
-            var backUrl = "http://35.204.43.65/demo/backAuth.php";
+            var backUrl = "http://35.204.43.65/demo/backAuth.php"; // Shouldnot be filixible
             doRedirectSandboxAuthorize(response.data.customerAction.formData.paReq, backUrl);            
           }else {
             $('#authenticationToken').val(response.data.customerAction.authenticationToken);

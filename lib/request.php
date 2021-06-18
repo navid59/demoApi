@@ -1,12 +1,19 @@
 <?php 
+session_start();
 include_once('lib/start.php');
 include_once('lib/authorize.php');
 include_once('lib/bank.php');
 include_once('lib/log.php');
 include_once("config/config.php");
-session_start();
+
 class request extends start{
+    public $authenticationToken;
+
     function __construct(){
+    //   die(print_r($_SESSION));
+    }
+
+    public function doPayment(){
       $jsonRequest = $this->setRequest();
       $result = $this->sendRequest($jsonRequest);
       print_r($result);       
@@ -27,10 +34,12 @@ class request extends start{
                 $_SESSION['authenticationToken'] = $resultObj->data->customerAction->authenticationToken;
                 $_SESSION['ntpID'] = $resultObj->data->payment->ntpID;
 
-                $authorize = new authorize();
-                $paReq   = $resultObj->data->customerAction->formData->paReq;
-                $backUrl = "http://35.204.43.65/demo/backAuth.php"; //bank::validateBackUrl($resultObj->data->customerAction->formData->backUrl);
-                $bankUrl = bank::validateBackUrl($resultObj->data->customerAction->url);
+                // die(print_r($_SESSION));
+                // $authorize = new authorize();
+                // $paReq   = $resultObj->data->customerAction->formData->paReq;
+                // $backUrl = "http://35.204.43.65/demo/backAuth.php"; //bank::validateBackUrl($resultObj->data->customerAction->formData->backUrl);
+                // $bankUrl = bank::validateBackUrl($resultObj->data->customerAction->url);
+
                 break;
             case 0:
                 $this->setLog("Card has no 3DS");
@@ -59,7 +68,7 @@ class request extends start{
 
     // Send request json
     protected function sendRequest($jsonStr) {
-
+      
       $url = 'https://secure.sandbox.netopia-payments.com/payment/card/start';
       $ch = curl_init($url);
 

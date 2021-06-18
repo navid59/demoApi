@@ -1,13 +1,15 @@
 <?php
+session_start();
 include_once('lib/log.php');
 include_once("config/config.php");
-// session_start();
+
 
 class verifyAuth {
     public $apiKey;
     public $authenticationToken;
     public $ntpID;
     public function __construct(){
+        
         $this->apiKey = $_SESSION['apiKey'];
         $this->authenticationToken = $_SESSION['authenticationToken'];
         $this->ntpID = $_SESSION['ntpID'];
@@ -37,7 +39,7 @@ class verifyAuth {
     
         // Set the content type to application/json
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type : application/json'));
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization : Uxf3OY--rDK3Qae8CiJJUlAcuRJFp7tzGY4M8KocQaCGyfEqUGhGskv0'));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array("Authorization : $this->apiKey"));
     
         // Return response instead of outputting
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

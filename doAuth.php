@@ -33,8 +33,10 @@ log::setRealTimeLog($setRealTimeLog);
         <?php include_once("assets/theme/inc/footer.inc"); ?>
         <script>
             (function() {
-                alert("Hello Do Auth - make Form & Submit to Bank - Temporarry Alert");
-               document.getElementById('authForm').submit();
+                // To auto submit the page to Temporary Sandbox Bank simulator
+                // alert("Do Auth - make Form & Submit to Bank - Temporary Sandbox Bank simulator");
+                console.log('Do Auth - make Form & Submit to Bank - Temporary Sandbox Bank simulator');
+                document.getElementById('authForm').submit();
             })();
         </script>
     </body>
