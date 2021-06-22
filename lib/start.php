@@ -99,4 +99,27 @@ class start {
         }
         return $proArr;
     }
+
+    public function setKeys() {
+        $fileTmpKey = 'certificates/keys.json';
+        try {
+            $keyArr = array(
+                'activeKey' => $this->posSignature,
+                'keySet'    => $this->posSignatureSet
+            );
+
+            file_put_contents($fileTmpKey, json_encode($keyArr));
+            return true;
+        } catch (\Throwable $th) {
+            //throw $th;
+            return false;
+        }
+    }
+
+
+    public function getKeys() {
+        $keysJson = file_get_contents('certificates/keys.json');
+        $keyArr   = json_decode($keysJson, true);
+        return($keyArr);
+    }
 }

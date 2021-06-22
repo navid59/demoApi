@@ -5,14 +5,18 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 include_once('lib/log.php');
+include_once('lib/ipn.php');
 
 require_once 'vendor/autoload.php';
 
 /**
  * Load .env 
  */
-$dotenv = new Dotenv\Dotenv(__DIR__);
-$dotenv->load();
+// $dotenv = new Dotenv\Dotenv(__DIR__);
+// $dotenv->load();
+
+$ipn = new ipn(); // New IPN OBJ
+
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\SignatureInvalidException;
@@ -64,10 +68,18 @@ const STATUS_EXPIRED								= 23;	//0x17; //cancel a not payed purchase
 $setRealTimeLog = ["IPN"    =>  "IPN Is hitting"];
 log::setRealTimeLog($setRealTimeLog);
 
+/**
+ *  Fetch all HTTP request headers
+ */
 $aHeaders = apache_request_headers();
+
+// Log
 log::setIpnLog($aHeaders);
 log::setIpnLog($_REQUEST);
 
+/**
+ *  check if header exist in HTTP request 
+ */
 if(!is_array($aHeaders))
 {
     $setRealTimeLog['missingHeader'] = "headers are missing";
@@ -76,6 +88,9 @@ if(!is_array($aHeaders))
 	exit;
 }
 
+/**
+ *  fetch Verification-token from HTTP header 
+ */
 $verificationToken = null;
 foreach($aHeaders as $headerName=>$headerValue)
 {
@@ -86,6 +101,9 @@ foreach($aHeaders as $headerName=>$headerValue)
 	}
 }
 
+/**
+ *  check if Verification-token exist / not null 
+ */
 if($verificationToken === null)
 {
     $setRealTimeLog['missingVerificationToken'] = "Verification-token is missing";
@@ -94,6 +112,7 @@ if($verificationToken === null)
 	exit;
 }
 
+/////////////////// --- POSITION PROBLEM START ///////////////////////////////////////////
 $publickKeyFilePath = 'certificates/live.LXTP-3WDM-WVXL-GC8B-Y5DA.public.cer';
 if (file_exists($publickKeyFilePath)) {
     $publicKey = openssl_pkey_get_public('file://' . $publickKeyFilePath);
@@ -119,7 +138,7 @@ if (file_exists($publickKeyFilePath)) {
     log::setRealTimeLog($setRealTimeLog);
     exit;
 }
-
+/////////////////// --- POSITION PROBLEM END ///////////////////////////////////////////
 
 $HTTP_RAW_POST_DATA = file_get_contents('php://input');
 $input = json_decode($HTTP_RAW_POST_DATA);
@@ -160,12 +179,18 @@ try {
         }
     
     /**
-     * TRADER_posSignature is wrong
-     * Shouldn't read from ENV
-     * Should read from OBJ
+     * check active posSignature 
+     * check if is in set of signature too
      */
-    if(empty($objJwt->aud) || $objJwt->aud != getenv('TRADER_posSignature')){
+    $ntpKeys = $ipn->getKeys();
+
+    if(empty($objJwt->aud) || $objJwt->aud != $ntpKeys['activeKey']){
         throw new \Exception('IDS_Service_IpnController__INVALID_SIGNATURE');
+        exit;
+    }
+
+    if(!in_array($objJwt->aud,$ntpKeys['keySet'],true)) {
+        throw new \Exception('IDS_Service_IpnController__INVALID_SIGNATURE_SET');
         exit;
     }
         
