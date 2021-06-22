@@ -1,16 +1,13 @@
 <?php 
-session_start();
 include_once('lib/start.php');
-include_once('lib/authorize.php');
 include_once('lib/bank.php');
 include_once('lib/log.php');
-include_once("config/config.php");
 
 class request extends start{
     public $authenticationToken;
 
     function __construct(){
-    //   die(print_r($_SESSION));
+        parent::__construct();
     }
 
     public function doPayment(){
@@ -30,20 +27,17 @@ class request extends start{
                     ];
                 log::setLog($resultObj->data->error->code, null ,$setRealTimeLog);
                 
-                // Set authenticationToken & ntpID to session
+                /**
+                 * Set authenticationToken & ntpID to session
+                 * Session is already started at first step (in index page) 
+                 */
                 $_SESSION['authenticationToken'] = $resultObj->data->customerAction->authenticationToken;
                 $_SESSION['ntpID'] = $resultObj->data->payment->ntpID;
 
-                // die(print_r($_SESSION));
-                // $authorize = new authorize();
-                // $paReq   = $resultObj->data->customerAction->formData->paReq;
-                // $backUrl = "http://35.204.43.65/demo/backAuth.php"; //bank::validateBackUrl($resultObj->data->customerAction->formData->backUrl);
-                // $bankUrl = bank::validateBackUrl($resultObj->data->customerAction->url);
-
-                break;
+            break;
             case 0:
                 $this->setLog("Card has no 3DS");
-                break;
+            break;
             default:
                 $this->setLog($resultObj->data->error->code ." -> ".$resultObj->data->error->message);
         }

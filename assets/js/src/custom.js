@@ -24,8 +24,9 @@ $(document).ready(() => {
     history.replaceState(null, null, newUrl);
   });
 
-  getLog(); // Real time Log
-  getIpnLog(); // Real time Log IPN
+
+  getLog();       // Real time Log
+  getIpnLog();    // Real time Log IPN
   getReturnLog(); // Real time Log success Page
 });
 
@@ -36,7 +37,7 @@ $(function () {
   e.preventDefault();
   $.ajax({
       type: 'post',
-      url: 'post.php',
+      url: 'makeRequest.php',
       // data: $('form').serialize(),
       data: $('#checkoutForm').serialize(),
       success: function (response) {
@@ -65,7 +66,7 @@ $(function () {
              * Step 2) Sandbox/Auton
              * preparing for redirect
              */
-            var backUrl = "http://35.204.43.65/demo/backAuth.php"; // Shouldnot be filixible
+            var backUrl = window.location.origin + "/demo/backAuth.php"; // Shouldnot be filixible
             doRedirectSandboxAuthorize(response.data.customerAction.formData.paReq, backUrl);            
           }else {
             $('#authenticationToken').val(response.data.customerAction.authenticationToken);
@@ -106,8 +107,7 @@ function doRedirectSandboxAuthorize(paReq, backUrl) {
 // Display Logs Real Time
 function getLog() {
   $.ajax({
-      url: 'http://35.204.43.65/demo/logs/realtimeLog.log',
-      // url: 'http://localhost/netopia_api_card/logs/realtimeLog.log',
+      url: window.location.origin + '/demo/logs/realtimeLog.log',
       dataType: 'text',
       success: function(text) {
           $("#containerDiv").html(text);
@@ -119,8 +119,7 @@ function getLog() {
 // Display IPN Logs Real Time
 function getIpnLog() {
   $.ajax({
-      url: 'http://35.204.43.65/demo/logs/ipnLog.log',
-      // url: 'http://localhost/netopia_api_card/logs/ipnLog.log',
+      url: window.location.origin + '/demo/logs/ipnLog.log',
       dataType: 'text',
       success: function(text) {
           $("#containerDivIpnLog").html(text);
@@ -132,8 +131,7 @@ function getIpnLog() {
 // Display Success page Logs Real Time
 function getReturnLog() {
   $.ajax({
-      url: 'http://35.204.43.65/demo/logs/returnLog.log',
-      // url: 'http://localhost/netopia_api_card/logs/returnLog.log',
+      url: window.location.origin + '/demo/logs/returnLog.log',
       dataType: 'text',
       success: function(text) {
           $("#containerDivReturnLog").html(text);
@@ -147,7 +145,7 @@ function cleanLogFile(logType) {
   // alert("Log Type : "+logType);
   $.ajax({
     type: 'post',
-    url: 'http://35.204.43.65/demo/clearLog.php',
+    url: window.location.origin + '/demo/clearLog.php',
     data: {'logType': logType},
     success: function(response) {
       response = JSON.parse(response);

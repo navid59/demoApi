@@ -4,13 +4,14 @@ class bank {
     function __construct(){        
     }
 
-    static function validateBackUrl($backUrl) {
+    static function validateBackUrl() {
         /**
-         * to Verify backUrl
+         * to Verify bank URL
+         * may content localhost:8080, can check it and replace localhost with Sandbox url
          */
 
-        // get backUrl, check if has localhost:8080, replace by Sandbox url
-        // Temporary, just replaced by static Str
+        // Temporary, just replaced by static String
+        // The following URL is a simulation of BANK 3D Verify PAGE
         
         return ("https://secure.sandbox.netopia-payments.com/sandbox/authorize");
     }

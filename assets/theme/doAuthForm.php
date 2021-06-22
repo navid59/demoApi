@@ -1,11 +1,10 @@
 <?php 
 session_start();
-// require_once("config/config.php");
-// $prices = array_column($products, 'pPrice');
-// die();
+include_once('lib/bank.php');
+
 ?>
 <div class="col" style="padding-top:15px;">
-    <form id="authForm" action="https://secure.sandbox.netopia-payments.com/sandbox/authorize" method="POST" enctype="application/x-www-form-urlencoded" class="" novalidate>
+    <form id="authForm" action="<?=bank::validateBackUrl();?>" method="POST" enctype="application/x-www-form-urlencoded" class="" novalidate>
     <div class="col-md-8 order-md-1">
         <h4 class="mb-3">Config Information</h4>
         <div class="mb-3">

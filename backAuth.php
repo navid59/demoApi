@@ -1,18 +1,20 @@
 <?php 
-// session_start();
+session_start();
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-include_once __DIR__ . '/vendor/autoload.php';
 include_once('lib/log.php');
 include_once('lib/verifyAuth.php');
 
+include_once __DIR__ . '/vendor/autoload.php';
 /**
  * Load .env 
  * Read Base root , ... from .env
+ * The  env var using in UI ,...
  */
+
 $dotenv = new Dotenv\Dotenv(__DIR__);
 $dotenv->load();
 
@@ -27,9 +29,10 @@ log::setRealTimeLog($setRealTimeLog);
 $setRealTimeLog = $_REQUEST;
 log::setRealTimeLog($setRealTimeLog);
 
-
+/**
+ * Define verifyAuth class
+ */
 $verifyAuth = new verifyAuth();
-
 /**
  * Set params for /payment/card/verify-auth
  * Format Json

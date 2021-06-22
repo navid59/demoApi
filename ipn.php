@@ -1,7 +1,9 @@
-<?php 
+<?php
+session_start();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
 include_once('lib/log.php');
 
 require_once 'vendor/autoload.php';
@@ -156,7 +158,12 @@ try {
         throw new \Exception('IDS_Service_IpnController__E_VERIFICATION_FAILED_GENERAL');
         exit;
         }
-
+    
+    /**
+     * TRADER_posSignature is wrong
+     * Shouldn't read from ENV
+     * Should read from OBJ
+     */
     if(empty($objJwt->aud) || $objJwt->aud != getenv('TRADER_posSignature')){
         throw new \Exception('IDS_Service_IpnController__INVALID_SIGNATURE');
         exit;

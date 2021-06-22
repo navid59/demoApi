@@ -1,0 +1,522 @@
+<li class="list-group-item"> - 10:53:38 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 10:53:38 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 10:53:38 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 10:53:38 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 10:53:42 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 10:53:42 -   <b>paRes : </b> Wb0Drkztqo7lmKZx-hDz8ipyM6iGGzqWAgHvH9Y4-a092rXzVvATNGXHiQ==</li>
+        <li class="list-group-item"> - 10:53:42 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 10:57:49 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 10:57:49 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 10:57:49 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 10:57:49 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 10:57:57 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 10:57:57 -   <b>paRes : </b> wMmpOybj8G_rxC06x9P2p651kpsphIvK7kvekc0wAfcsa3pyrxHE_vjGhA==</li>
+        <li class="list-group-item"> - 10:57:57 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 10:58:10 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 10:58:10 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 10:58:10 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 10:58:10 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 10:58:24 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 10:58:24 -   <b>paRes : </b> zCKJNknJGll8bwBxWpP8Xfms356ocOrHWY7dd5byV930Xr535U5phLd52A==</li>
+        <li class="list-group-item"> - 10:58:26 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 10:58:37 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 10:58:37 -  </li>
+        <li class="list-group-item"> - 10:59:23 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 10:59:23 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 10:59:23 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 10:59:24 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 10:59:43 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 10:59:43 -   <b>paRes : </b> u0kKsXv4IBQ5pzHlw8kzLfcBogSXlXprhNRHYE5vZlDdyZdIFN5e0SaMhQ==</li>
+        <li class="list-group-item"> - 10:59:44 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 10:59:58 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 10:59:58 -  </li>
+        <li class="list-group-item"> - 11:00:35 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:00:35 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:00:35 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:00:36 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:00:39 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 11:00:39 -   <b>paRes : </b> 3IDVU1H5ikbEkUWpk8FMwZpg-ouAhRnN2F0H1LdbpqhXTDC7satizqa8hg==</li>
+        <li class="list-group-item"> - 11:00:40 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 11:00:49 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 11:00:49 -  </li>
+        <li class="list-group-item"> - 11:03:06 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:03:06 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:03:06 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:03:06 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:03:11 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 11:03:11 -   <b>paRes : </b> EQKYNe9WqhxVMOMQcgOiaPz7eOVZl2MGP5RBV-Z9evqLWPQ8Pe9JurW4MA==</li>
+        <li class="list-group-item"> - 11:03:12 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 11:03:21 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 11:03:21 -  </li>
+        <li class="list-group-item"> - 11:05:50 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:05:50 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:05:50 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:05:50 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:05:55 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 11:05:55 -   <b>paRes : </b> fUq8XbKqmRfe4MM2MA3uExFGNzVcaCdNScEEZWAbdvCfVbxHrdPq3w7KDw==</li>
+        <li class="list-group-item"> - 11:05:55 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 11:30:15 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:30:15 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:30:15 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:30:15 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:30:34 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 11:30:34 -   <b>paRes : </b> YBrd3oIktcKgH5X391u1Bmt22eGYUvFVoS4A3l--QsM1FcoLgqxaQVGgHg==</li>
+        <li class="list-group-item"> - 11:30:34 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 11:33:26 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:33:26 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:33:26 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:34:53 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:34:53 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:34:53 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:34:53 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:38:59 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:38:59 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:38:59 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:38:59 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:39:36 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 11:39:36 -   <b>paRes : </b> 8kOjUW4H_ZUh1BWgM0sa1y57gWqhysia6NpXUBKMMHatQmaSgPHi8LOMgg==</li>
+        <li class="list-group-item"> - 11:39:37 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 11:39:44 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 11:39:44 -  </li>
+        <li class="list-group-item"> - 11:39:57 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:39:57 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:39:57 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:39:57 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:40:02 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 11:40:02 -   <b>paRes : </b> Y3Mxa1tFE6IbhV2tOSj_dBdDiy_voNsPPW3qoCIcBWDBntR0J5AyZCU8vw==</li>
+        <li class="list-group-item"> - 11:40:03 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 11:40:14 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 11:40:14 -  </li>
+        <li class="list-group-item"> - 11:40:20 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:40:20 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:40:20 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:40:20 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:40:25 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 11:40:25 -   <b>paRes : </b> pVsmlpa9Go5Sf6myXN5A1kcm9zPMgBXUcw_4I0ZhqRWEnK4-qgzMU5alHg==</li>
+        <li class="list-group-item"> - 11:40:26 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 11:40:34 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 11:40:34 -  </li>
+        <li class="list-group-item"> - 11:43:37 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:43:37 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:43:37 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:43:37 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:43:43 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 11:43:43 -   <b>paRes : </b> 9kWngfWJi9QN2Qil6gx5L3tQp9l-mJRYo0M6yJYZwtG03-vF6CYxHj25WA==</li>
+        <li class="list-group-item"> - 11:43:43 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 11:44:13 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:44:13 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:44:13 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:44:13 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:44:19 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 11:44:19 -   <b>paRes : </b> sUfI6ht8Z_sEg7P67WoQDps-lfoxXwn-pK4ah5Id_yH7J2j3CbkfXfXT-g==</li>
+        <li class="list-group-item"> - 11:44:20 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 11:44:27 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 11:44:27 -  </li>
+        <li class="list-group-item"> - 11:44:36 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:44:36 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:44:36 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:44:36 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:44:40 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 11:44:40 -   <b>paRes : </b> INcWydonhZqNqK3pGtrAvbJji0O6O3Sa4RcVlCbRbIle-uTsZZke67a8nA==</li>
+        <li class="list-group-item"> - 11:44:41 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 11:44:54 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:44:54 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:44:54 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:44:54 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:44:58 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 11:44:58 -  </li>
+        <li class="list-group-item"> - 11:44:58 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 11:44:58 -   <b>paRes : </b> JLeIfpldIvBaioQ_27rD7ZytcvFn5q3gUywSxSCBc-G9e6FMDtooUWStng==</li>
+        <li class="list-group-item"> - 11:44:59 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 11:45:08 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:45:08 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:45:08 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:45:08 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:45:08 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 11:45:08 -  </li>
+        <li class="list-group-item"> - 11:45:16 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 11:45:16 -   <b>paRes : </b> D4I-aD7jHImbRUYqPrGaLnr214kEhgJyiwhST6Nu_BFfGoex_2ZoCUX2jg==</li>
+        <li class="list-group-item"> - 11:45:17 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 11:45:29 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 11:45:29 -  </li>
+        <li class="list-group-item"> - 11:45:38 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:45:38 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:45:38 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:45:38 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:45:42 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 11:45:42 -   <b>paRes : </b> N5JFnKx-JPJ_IHQeAzI9mUz9gzzZlx9l4NTUBVs6xKf9Br4OymqSGtNPsw==</li>
+        <li class="list-group-item"> - 11:45:43 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 11:45:49 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 11:45:49 -  </li>
+        <li class="list-group-item"> - 11:48:23 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:48:23 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:48:23 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:48:23 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:48:27 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 11:48:27 -   <b>paRes : </b> baFPzYalnIzoFqgsRsXuadkFAnsnXOuS9AEiLgpTy0kONMpZxgvy2WUwHA==</li>
+        <li class="list-group-item"> - 11:48:27 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 11:49:12 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:49:12 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:49:12 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:49:12 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:49:17 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 11:49:17 -   <b>paRes : </b> V0Iyeg8-hvNnN_SxWZWd2S5iDvCmTgvtz2leUNZ9F3M7nej77WtEIERCeg==</li>
+        <li class="list-group-item"> - 11:49:18 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 11:49:28 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:49:28 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:49:28 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:49:28 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:49:32 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 11:49:32 -  </li>
+        <li class="list-group-item"> - 11:49:32 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 11:49:32 -   <b>paRes : </b> 4-zb8rTGO9JqccoRC0vEhji_Ih7CuGtN7XCjbKGkVIj--o-HZTgIqvqnEw==</li>
+        <li class="list-group-item"> - 11:49:33 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 11:49:43 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 11:49:43 -  </li>
+        <li class="list-group-item"> - 11:49:52 -   <b>Message : </b> Opps! Something is wrong.</li>
+        <li class="list-group-item"> - 11:52:04 -   <b>Message : </b> Opps! Something is wrong.</li>
+        <li class="list-group-item"> - 11:52:12 -   <b>Message : </b> Opps! Something is wrong.</li>
+        <li class="list-group-item"> - 11:52:31 -   <b>Message : </b> Opps! Something is wrong.</li>
+        <li class="list-group-item"> - 11:53:22 -   <b>Message : </b> Opps! Something is wrong.</li>
+        <li class="list-group-item"> - 11:54:00 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:54:00 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:54:00 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:54:00 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:54:05 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 11:54:05 -   <b>paRes : </b> MVIFa3YWbREbeAPQNvAr01apk-4blem5OZ2uMFyUTS77g8GlJTlPqTYbuQ==</li>
+        <li class="list-group-item"> - 11:54:05 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 11:56:00 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 11:56:00 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:56:00 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 11:56:01 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 11:58:19 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 11:58:19 -   <b>paRes : </b> C-jZOashqIOZ-gABQXgsZ_D-dFhK2aS6GS2pw5RbeDkuT5uaJxbQ42fUPg==</li>
+        <li class="list-group-item"> - 11:58:19 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 12:00:59 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 12:00:59 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:00:59 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:00:59 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 12:01:06 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:01:06 -   <b>paRes : </b> 0Fux1tTtdhvBTDeTeICFrLwjP-1CFjwxs3bytIkMeGFFXwiLDtIGg6r_bA==</li>
+        <li class="list-group-item"> - 12:01:07 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 12:01:12 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 12:01:12 -  </li>
+        <li class="list-group-item"> - 12:02:15 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:02:15 -   <b>paRes : </b> 0Fux1tTtdhvBTDeTeICFrLwjP-1CFjwxs3bytIkMeGFFXwiLDtIGg6r_bA==</li>
+        <li class="list-group-item"> - 12:02:15 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 12:03:41 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:03:41 -   <b>paRes : </b> 0Fux1tTtdhvBTDeTeICFrLwjP-1CFjwxs3bytIkMeGFFXwiLDtIGg6r_bA==</li>
+        <li class="list-group-item"> - 12:03:41 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 12:04:42 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:04:42 -   <b>paRes : </b> 0Fux1tTtdhvBTDeTeICFrLwjP-1CFjwxs3bytIkMeGFFXwiLDtIGg6r_bA==</li>
+        <li class="list-group-item"> - 12:07:04 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:07:04 -   <b>paRes : </b> 0Fux1tTtdhvBTDeTeICFrLwjP-1CFjwxs3bytIkMeGFFXwiLDtIGg6r_bA==</li>
+        <li class="list-group-item"> - 12:07:04 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 12:07:10 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:07:10 -   <b>paRes : </b> 0Fux1tTtdhvBTDeTeICFrLwjP-1CFjwxs3bytIkMeGFFXwiLDtIGg6r_bA==</li>
+        <li class="list-group-item"> - 12:07:10 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 12:07:15 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:07:15 -   <b>paRes : </b> 0Fux1tTtdhvBTDeTeICFrLwjP-1CFjwxs3bytIkMeGFFXwiLDtIGg6r_bA==</li>
+        <li class="list-group-item"> - 12:07:15 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 12:07:26 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 12:07:26 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:07:26 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:07:26 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 12:07:30 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:07:30 -   <b>paRes : </b> 11vFf6uMvzzCFJUBYH77HJGcWKexfh98TSsumUsjkoOuwU-hQeCljeX2tQ==</li>
+        <li class="list-group-item"> - 12:07:31 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 12:07:48 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 12:07:48 -  </li>
+        <li class="list-group-item"> - 12:08:30 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:08:30 -   <b>paRes : </b> 11vFf6uMvzzCFJUBYH77HJGcWKexfh98TSsumUsjkoOuwU-hQeCljeX2tQ==</li>
+        <li class="list-group-item"> - 12:17:10 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 12:17:10 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:17:10 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:17:10 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 12:17:20 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:17:20 -   <b>paRes : </b> pMy0Blw0HMQQYiq4XUaqK9tzUtUpGAatIwBzMbTLel0dbGr5_0OzLREbSg==</li>
+        <li class="list-group-item"> - 12:17:21 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 12:17:32 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 12:17:32 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:17:32 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:17:32 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 12:17:37 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 12:17:37 -  </li>
+        <li class="list-group-item"> - 12:17:38 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:17:38 -   <b>paRes : </b> N4_Ls5Ug7Yzbjuw_lNNz7AKd8Nzzi0QCe5dkXCsfUztgzyGu_yU3Q7tDHQ==</li>
+        <li class="list-group-item"> - 12:17:38 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 12:19:00 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:19:00 -   <b>paRes : </b> N4_Ls5Ug7Yzbjuw_lNNz7AKd8Nzzi0QCe5dkXCsfUztgzyGu_yU3Q7tDHQ==</li>
+        <li class="list-group-item"> - 12:19:19 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 12:19:19 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:19:19 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:19:19 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 12:19:24 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:19:24 -   <b>paRes : </b> LpzwrV-ZVaP7j02CLlV2JvBsXoHe8comp282XGq0OXE5UtbMLweBdwkuug==</li>
+        <li class="list-group-item"> - 12:19:25 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 12:19:36 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 12:19:36 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:19:36 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:19:36 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 12:19:38 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 12:19:38 -  </li>
+        <li class="list-group-item"> - 12:19:43 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:19:43 -   <b>paRes : </b> MyOtR0Xjo9nHy8Fj15l9zCHmVt8-8W4XQ0Z-4z7B-WhykpThZNnnvagCJg==</li>
+        <li class="list-group-item"> - 12:19:44 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 12:19:49 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 12:19:49 -  </li>
+        <li class="list-group-item"> - 12:20:08 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 12:20:08 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:20:08 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:20:08 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 12:20:13 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:20:13 -   <b>paRes : </b> eI8L4Gngyhq5JJrJDF4nFSZ8SJtJbQRI225547q9Szan2Fu6haWzk8JyAA==</li>
+        <li class="list-group-item"> - 12:20:14 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 12:20:30 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 12:20:30 -  </li>
+        <li class="list-group-item"> - 12:20:34 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 12:20:34 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:20:34 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:20:34 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 12:20:38 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:20:38 -   <b>paRes : </b> PFrJphS38cszVAKemqWvznzIrbYLNf-vQwmhtSerRP43DrHTP1CvDip9_Q==</li>
+        <li class="list-group-item"> - 12:20:39 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 12:20:50 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 12:20:50 -  </li>
+        <li class="list-group-item"> - 12:20:55 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 12:20:55 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:20:55 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:20:55 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 12:20:59 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:20:59 -   <b>paRes : </b> ndEUQypGjrRPNz7xDxcCBEKH2KClS9PYh2NLAzm320jcGDxVJZsq05Hn5w==</li>
+        <li class="list-group-item"> - 12:21:00 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 12:21:14 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 12:21:14 -  </li>
+        <li class="list-group-item"> - 12:21:18 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 12:21:18 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:21:18 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:21:18 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 12:21:22 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:21:22 -   <b>paRes : </b> 4qV5geq_TdkjH2s1-k2BHWFhgmrm0HajUfsugoPwgUhXXU_VH1Q4wJubUA==</li>
+        <li class="list-group-item"> - 12:21:23 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 12:21:34 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 12:21:34 -  </li>
+        <li class="list-group-item"> - 12:26:53 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 12:26:53 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:26:53 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:26:53 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 12:26:58 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:26:58 -   <b>paRes : </b> 6VvM9fOAGxZUXOJcxV2dSVfL153F0IzWP-tNlj312JHCH0ythBKJPUBZWw==</li>
+        <li class="list-group-item"> - 12:26:58 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 12:30:32 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 12:30:32 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:30:32 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:30:32 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 12:30:36 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:30:36 -   <b>paRes : </b> NGyq4KUHAUb4ZjFHmanV1-JSgPrf_aluC0LurZjV_r9KE9GwpEJA7Cr0pQ==</li>
+        <li class="list-group-item"> - 12:30:36 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 12:48:14 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 12:48:14 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:48:14 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:48:14 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 12:48:19 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:48:19 -   <b>paRes : </b> vlGmrKvle7ODmuegbdcb14dYqbnTQlRft4KSCz4ymD0V82UfV_S-WQoATQ==</li>
+        <li class="list-group-item"> - 12:48:19 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 12:54:31 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 12:54:31 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:54:31 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:54:31 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 12:55:11 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 12:55:11 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:55:11 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:55:11 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 12:56:12 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 12:56:12 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:56:12 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:56:13 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 12:56:18 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:56:18 -   <b>paRes : </b> RqbIvLVmJ43ggb8mRtWs1E0EHxw65euOTwXPsEt_GeqiWTHCsjXfGqlKPA==</li>
+        <li class="list-group-item"> - 12:56:18 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 12:56:28 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 12:56:28 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:56:28 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 12:56:28 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 12:56:33 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 12:56:33 -   <b>paRes : </b> v_vfM_1JFaRmrF_U5R5_WkgDBJeFC3Bj4k7YFoszHNOXLtKFcJfUZGK9sQ==</li>
+        <li class="list-group-item"> - 12:56:34 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 12:56:44 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 12:56:44 -  </li>
+        <li class="list-group-item"> - 13:00:20 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 13:00:20 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 13:00:20 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 13:00:20 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 13:00:25 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 13:00:25 -   <b>paRes : </b> PmNUNjHHkRinD_8EuXAWD8jeOTfywsqLLjMN9nZXkqzkmdI8kzIwQgLuKA==</li>
+        <li class="list-group-item"> - 13:00:25 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 13:31:49 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 13:31:49 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 13:31:49 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 13:31:49 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 13:31:54 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 13:31:54 -   <b>paRes : </b> LvzPvt0_BJ2V2sq92hhZ27g1H-LYSvSM2evNF7HqIMlvYfii6xKzEVY1yA==</li>
+        <li class="list-group-item"> - 13:31:55 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 13:36:41 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 13:36:41 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 13:36:41 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 13:36:41 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 13:36:45 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 13:36:45 -   <b>paRes : </b> 88rnjzomRxggibIc-E3qUvS6SAeHrTnw_J-feyGVzfKzwVq_0hft7aXisg==</li>
+        <li class="list-group-item"> - 13:36:45 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 13:36:54 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 13:36:54 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 13:36:54 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 13:36:54 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 13:36:59 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 13:36:59 -   <b>paRes : </b> JmiFTAdxj2E2v0KIHs2shbMhpWikpYzvLg5bVjIBXwvSj4QX3dTxccgOOw==</li>
+        <li class="list-group-item"> - 13:37:00 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 13:38:40 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 13:38:40 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 13:38:40 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 13:38:40 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 13:38:45 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 13:38:45 -   <b>paRes : </b> uVBL0xNDUUGA7gUIOj-_B7vsv0iXsUckjvxTZoK2QcNRKlU7dgpAD_xVXA==</li>
+        <li class="list-group-item"> - 13:38:47 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 13:38:54 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 13:38:54 -  </li>
+        <li class="list-group-item"> - 13:53:25 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 13:53:25 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 13:53:25 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 13:53:25 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 13:54:26 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 13:54:26 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 13:54:26 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 13:54:26 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 14:00:39 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 14:00:39 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 14:00:39 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 14:00:39 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 14:06:25 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 14:06:26 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 14:06:38 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 14:06:38 -   <b>paRes : </b> _AxaEDR7y7gJu21PM15K0YrptPpXEEX1N2VyEm8_UhAA4Vv2Fni7a91O_g==</li>
+        <li class="list-group-item"> - 14:06:38 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 14:08:16 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 14:08:16 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 14:08:16 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 14:08:16 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 14:08:21 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 14:08:21 -   <b>paRes : </b> JPZ1S0I0j3S8zdsziqcju5XrT9Qt6D_jjpUJTb30puLVkoGh1BJfPiL0Yw==</li>
+        <li class="list-group-item"> - 14:08:22 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 14:08:29 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 14:08:29 -  </li>
+        <li class="list-group-item"> - 14:09:26 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 14:09:26 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 14:09:26 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 14:09:26 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 14:09:30 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 14:09:30 -   <b>paRes : </b> FfyWK8oqqAOjypIryoYMbZ5PnZ5NgLt_1-6ALL6LyQDsB5spqweVJZn5zA==</li>
+        <li class="list-group-item"> - 14:09:30 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 14:10:05 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 14:10:05 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 14:10:05 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 14:10:05 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 14:10:08 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 14:10:08 -   <b>paRes : </b> CAIDe74w9-PShP8baulbkmQHQzwTnYEVGf3JIAFqFyJ50ugwvEhqbwcRAQ==</li>
+        <li class="list-group-item"> - 14:10:09 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 14:10:20 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 14:10:20 -  </li>
+        <li class="list-group-item"> - 14:14:04 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 14:14:04 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 14:14:04 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 14:14:04 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 14:14:08 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 14:14:08 -   <b>paRes : </b> jIP1e5SuH10HA0jwr6eo0ps5AXZRNsScOxTOXkW9RBJouaN3c1VfO3ccsQ==</li>
+        <li class="list-group-item"> - 14:14:08 -   <b>Message : </b> Opps! Something is wrong, can not send data to verify-auth.</li>
+        <li class="list-group-item"> - 14:14:18 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 14:14:18 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 14:14:18 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 14:14:18 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 14:14:22 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 14:14:22 -   <b>paRes : </b> X_7-oJlJQWkoLfYL0cnYayWu0PVeIJKjaHVbbtTHrAio3yil8XoqITwr-w==</li>
+        <li class="list-group-item"> - 14:14:23 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 14:14:33 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 14:14:33 -  </li>
+        <li class="list-group-item"> - 14:14:43 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 14:14:43 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 14:14:43 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 14:14:43 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 14:14:46 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 14:14:46 -   <b>paRes : </b> g9g1B9A_sXrIkOdK5ev5XnGAiml3AvnaL35tSfGlBEH8a6eoub0PZT59AQ==</li>
+        <li class="list-group-item"> - 14:14:47 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 14:15:03 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 14:15:03 -  </li>
+        <li class="list-group-item"> - 14:15:08 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully.</li>
+        <li class="list-group-item"> - 14:15:08 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 14:15:08 -   <b>Code : </b> 100 <b>Message : </b> Approved</li>
+        <li class="list-group-item"> - 14:15:08 -   <b>Do Auth : </b> Is hitting - will redirect <b>What is  : </b> Send Parameter (paReq , backUrl) to the Bank</li>
+        <li class="list-group-item"> - 14:15:12 -   <b>BackUrl : </b> Is hitting - come from bank <b>input : </b> Listen to Bank to get paRes <b>Output : </b> Will Call VerifyAuth</li>
+        <li class="list-group-item"> - 14:15:12 -   <b>paRes : </b> GRWLrS29IeLSBzT25XryEJuhvTIJ-dxH-72U5U9kKEqGtturUcRP5iZbQw==</li>
+        <li class="list-group-item"> - 14:15:12 -   <b>Code : </b> 200 <b>Message : </b> Request sent successfully for /payment/card/verify-auth.</li>
+        <li class="list-group-item"> - 14:15:24 -   <b>IPN : </b> IPN Is hitting</li>
+        <br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/var/www/html/demo/lib/log.php</b> on line <b>54</b><br />
+<li class="list-group-item"> - 14:15:24 -  </li>
+        

@@ -1,8 +1,16 @@
 <?php 
 class start {
-    protected $startJson;
+    // protected $startJson;
+    public $posSignature;
+    public $posSignatureSet;
+    public $notifyUrl;
+    public $redirectUrl;
+    public $apiKey;
+    public $startEndpoint;
 
+    
     function __construct(){
+        //
     }
 
     protected function setConfig() {
@@ -41,7 +49,7 @@ class start {
             'ntpID'         => isset($_POST['ntpID']) ? $_POST['ntpID'] : null,
             'posSignature'  => (string) $_POST['posSignature'],
             'dateTime'      => (string) date("c", strtotime(date("Y-m-d H:i:s"))),
-            'description'   => (string) "TEST API FROM WEB",
+            'description'   => (string) "DEMO API FROM WEB",
             'orderID'       => (string) $_POST['orderID'],
             'amount'        => (float)  $_POST['amount'],
             'currency'      => (string) $_POST['currency'],
@@ -67,7 +75,7 @@ class start {
                 'postalCode'    => (string) $_POST['shippingZip'],
                 'details'       => (string) "Fara Detalie"
             ],
-            'products' => $this->getProducts(),
+            'products' => $this->setProducts(),
             'installments'  => array(
                                     'selected'  => (int) 0,
                                     'available' => [(int) 0]
@@ -78,7 +86,7 @@ class start {
         return $order;
     }
 
-    protected function getProducts()
+    protected function setProducts()
     {
         foreach ($_POST['products'] as $productItem) {
             $proArr[] = [
