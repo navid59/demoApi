@@ -6,7 +6,10 @@ class start {
     public $notifyUrl;
     public $redirectUrl;
     public $apiKey;
-    public $startEndpoint;
+    
+    public $isLive;
+    public $hashMethod;
+    public $alg;
 
     
     function __construct(){
@@ -105,7 +108,10 @@ class start {
         try {
             $keyArr = array(
                 'activeKey' => $this->posSignature,
-                'keySet'    => $this->posSignatureSet
+                'keySet'    => $this->posSignatureSet,
+                'isLive'    => $this->isLive,
+                'hashMethod'=> $this->hashMethod,
+                'alg'       => $this->alg
             );
 
             file_put_contents($fileTmpKey, json_encode($keyArr));
@@ -118,8 +124,8 @@ class start {
 
 
     public function getSetting() {
-        $keysJson = file_get_contents('certificates/setting.json');
-        $keyArr   = json_decode($keysJson, true);
-        return($keyArr);
+        $jsonSetting = file_get_contents('certificates/setting.json');
+        $arrSetting  = json_decode($jsonSetting, true);
+        return($arrSetting);
     }
 }

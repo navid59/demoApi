@@ -63,7 +63,7 @@ log::setRealTimeLog($setRealTimeLog);
  * get defined keys
  */
 $ipn = new ipn(); // New IPN OBJ
-$ntpKeys = $ipn->getSetting();
+$ntpSetting = $ipn->getSetting();
 /**
  *  Fetch all HTTP request headers
  */
@@ -110,7 +110,7 @@ if($verificationToken === null)
 
 /////////////////// --- POSITION PROBLEM START ///////////////////////////////////////////
 $publickKeyFilePath = 'certificates/live.LXTP-3WDM-WVXL-GC8B-Y5DA.public.cer';
-// $publickKeyFilePath = 'certificates/'.$ntpKeys['activeKey'].'.public.cer';
+// $publickKeyFilePath = 'certificates/'.$ntpSetting['activeKey'].'.public.cer';
 if (file_exists($publickKeyFilePath)) {
     $publicKey = openssl_pkey_get_public('file://' . $publickKeyFilePath);
     if($publicKey === false)
@@ -161,7 +161,16 @@ if (file_exists($publickKeyFilePath)) {
     exit; 
   }
 
-  $jwtAlgorithm = !is_null($jwtHeader->alg) ? $jwtHeader->alg : 'RS512' ;
+  /**
+   * The name of the alg defined in header of JWT
+   * Just in case we set the default algorithm
+   * Default alg is RS512
+   */
+  if(!isset($ntpSetting['alg']) || $ntpSetting['alg']==null){
+    throw new \Exception('IDS_Service_IpnController__INVALID_JWT_ALG');
+    exit;
+  }
+  $jwtAlgorithm = !is_null($jwtHeader->alg) ? $jwtHeader->alg : $ntpSetting['alg'] ;
 
 try {
     JWT::$timestamp = time() * 1000;
@@ -181,23 +190,30 @@ try {
      * check active posSignature 
      * check if is in set of signature too
      */
-    if(empty($objJwt->aud) || $objJwt->aud != $ntpKeys['activeKey']){
+    if(empty($objJwt->aud) || $objJwt->aud != $ntpSetting['activeKey']){
         throw new \Exception('IDS_Service_IpnController__INVALID_SIGNATURE');
         exit;
     }
 
-    if(!in_array($objJwt->aud,$ntpKeys['keySet'],true)) {
+    if(!in_array($objJwt->aud,$ntpSetting['keySet'],true)) {
         throw new \Exception('IDS_Service_IpnController__INVALID_SIGNATURE_SET');
         exit;
     }
-        
-    ///////////////////////////////////////////
-    ///////////////////////////////////////////
+    
+    if(!isset($ntpSetting['hashMethod']) || $ntpSetting['hashMethod']==null){
+        throw new \Exception('IDS_Service_IpnController__INVALID_HASH_METHOD');
+        exit;
+    }
+    
+    /**
+     * GET HTTP HEADER
+     */
     $payload = $HTTP_RAW_POST_DATA;
     /**
 	 * validate payload
+     * sutable hash method is SHA512 
 	 */
-    $payloadHash = base64_encode(hash ('SHA512', $payload, true ));
+    $payloadHash = base64_encode(hash ($ntpSetting['hashMethod'], $payload, true ));
     /**
 	 * check IPN data integrity
 	 */

@@ -8,6 +8,7 @@ error_reporting(E_ALL);
 include_once('lib/log.php');
 include_once('lib/verifyAuth.php');
 
+
 include_once __DIR__ . '/vendor/autoload.php';
 /**
  * Load .env 
@@ -17,6 +18,14 @@ include_once __DIR__ . '/vendor/autoload.php';
 
 $dotenv = new Dotenv\Dotenv(__DIR__);
 $dotenv->load();
+
+// if Session is expired
+echo count($_SESSION);
+if(count($_SESSION) == 0 || !isset($_SESSION)) {
+    $url = 'http://35.204.43.65/demo/404.php';
+    header("Location: $url");
+    exit;
+}
 
 $setRealTimeLog = 
             [
