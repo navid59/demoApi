@@ -108,9 +108,12 @@ if($verificationToken === null)
 	exit;
 }
 
-/////////////////// --- POSITION PROBLEM START ///////////////////////////////////////////
-$publickKeyFilePath = 'certificates/live.LXTP-3WDM-WVXL-GC8B-Y5DA.public.cer';
-// $publickKeyFilePath = 'certificates/'.$ntpSetting['activeKey'].'.public.cer';
+/////////////////// ---  PROBLEM START ///////////////////////////////////////////
+// Maybe be change to read as string or get option to read from File or from String
+//////////////////////////////////////////////////////////////////////////////////
+
+// $publickKeyFilePath = 'certificates/live.LXTP-3WDM-WVXL-GC8B-Y5DA.public.cer';
+$publickKeyFilePath = 'certificates/'.$ntpSetting['activeKey'].'.public.cer';
 if (file_exists($publickKeyFilePath)) {
     $publicKey = openssl_pkey_get_public('file://' . $publickKeyFilePath);
     if($publicKey === false)
@@ -137,10 +140,10 @@ if (file_exists($publickKeyFilePath)) {
     log::setRealTimeLog($setRealTimeLog);
     exit;
 }
-/////////////////// --- POSITION PROBLEM END ///////////////////////////////////////////
+/////////////////// --- PROBLEM END ///////////////////////////////////////////
 
-// $HTTP_RAW_POST_DATA = file_get_contents('php://input');
-// $input = json_decode($HTTP_RAW_POST_DATA);
+$HTTP_RAW_POST_DATA = file_get_contents('php://input');
+// $input = json_decode($HTTP_RAW_POST_DATA); // can be get all recived data from $input
 
 
 
@@ -221,6 +224,8 @@ try {
 	if(strcmp($payloadHash, $objJwt->sub) != 0)
 	{
         throw new \Exception('IDS_Service_IpnController__E_VERIFICATION_FAILED_TAINTED_PAYLOAD', E_VERIFICATION_FAILED_TAINTED_PAYLOAD);
+        print_r($payloadHash); // Temporay for Debuging
+        exit;
     }
 
     try

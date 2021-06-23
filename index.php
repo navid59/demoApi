@@ -9,12 +9,15 @@ include_once('lib/request.php');
 
 $netopia = new request();
 
+// FOR START Action - Start
 $netopia->notifyUrl    = 'http://35.204.43.65/demo/ipn.php';
 $netopia->redirectUrl  = 'http://35.204.43.65/demo/return.php';
 $netopia->apiKey       = 'Uxf3OY--rDK3Qae8CiJJUlAcuRJFp7tzGY4M8KocQaCGyfEqUGhGskv0';
 
-$netopia->posSignature = 'LXTP-3WDM-WVXL-GC8B-Y5DA';
+$netopia->posSignature = 'LXTP-3WDM-WVXL-GC8B-Y5DA'; // START & IPN
+// FOR START Action - END
 
+// ONLY IPN - START
 $netopia->posSignatureSet[] = 'LXTP-3WDM-WVXL-GC8B-Y5DA';
 $netopia->posSignatureSet[] = 'LXTP-3WDM-WVXL-GC8B-Y5DA_fake1'; 
 $netopia->posSignatureSet[] = 'LXTP-3WDM-WVXL-GC8B-Y5DA_fake2'; 
@@ -24,6 +27,9 @@ $netopia->isLive = false;
 $netopia->hashMethod = 'SHA512';
 $netopia->alg = 'RS512';
 
+$netopia->publicKeyStr = '';
+
+// ONLY IPN - END
 
 $netopia->setSetting();
 

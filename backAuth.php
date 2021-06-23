@@ -19,8 +19,10 @@ include_once __DIR__ . '/vendor/autoload.php';
 $dotenv = new Dotenv\Dotenv(__DIR__);
 $dotenv->load();
 
-// if Session is expired
-echo count($_SESSION);
+/**
+ * if Session is expired
+ * redirect to 404 - TEMPORARY
+ * */ 
 if(count($_SESSION) == 0 || !isset($_SESSION)) {
     $url = 'http://35.204.43.65/demo/404.php';
     header("Location: $url");
