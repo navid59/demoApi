@@ -66,7 +66,7 @@ $(function () {
              * Step 2) Sandbox/Auton
              * preparing for redirect
              */
-            var backUrl = window.location.origin + "/demo/backAuth.php"; // Shouldnot be filixible
+            var backUrl = window.location.origin + "/demo/backAuth.php"; 
             doRedirectSandboxAuthorize(response.data.customerAction.formData.paReq, backUrl);            
           }else {
             $('#authenticationToken').val(response.data.customerAction.authenticationToken);

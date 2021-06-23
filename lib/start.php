@@ -100,8 +100,8 @@ class start {
         return $proArr;
     }
 
-    public function setKeys() {
-        $fileTmpKey = 'certificates/keys.json';
+    public function setSetting() {
+        $fileTmpKey = 'certificates/setting.json';
         try {
             $keyArr = array(
                 'activeKey' => $this->posSignature,
@@ -117,8 +117,8 @@ class start {
     }
 
 
-    public function getKeys() {
-        $keysJson = file_get_contents('certificates/keys.json');
+    public function getSetting() {
+        $keysJson = file_get_contents('certificates/setting.json');
         $keyArr   = json_decode($keysJson, true);
         return($keyArr);
     }

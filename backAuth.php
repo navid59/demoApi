@@ -33,6 +33,11 @@ log::setRealTimeLog($setRealTimeLog);
  * Define verifyAuth class
  */
 $verifyAuth = new verifyAuth();
+
+$verifyAuth->apiKey = $_SESSION['apiKey'];
+$verifyAuth->authenticationToken = $_SESSION['authenticationToken'];
+$verifyAuth->ntpID = $_SESSION['ntpID'];
+
 /**
  * Set params for /payment/card/verify-auth
  * Format Json

@@ -1,7 +1,7 @@
 <?php 
 session_start();
 include_once('lib/bank.php');
-
+// die(print_r($_SESSION)); // Hear have Session all the Time
 ?>
 <div class="col" style="padding-top:15px;">
     <form id="authForm" action="<?=bank::validateBackUrl();?>" method="POST" enctype="application/x-www-form-urlencoded" class="" novalidate>

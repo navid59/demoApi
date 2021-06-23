@@ -20,7 +20,7 @@ $netopia->posSignatureSet[] = 'LXTP-3WDM-WVXL-GC8B-Y5DA_fake1';
 $netopia->posSignatureSet[] = 'LXTP-3WDM-WVXL-GC8B-Y5DA_fake2'; 
 $netopia->posSignatureSet[] = 'LXTP-3WDM-WVXL-GC8B-Y5DA_fake3';
 
-$netopia->setKeys();
+$netopia->setSetting();
 
 $_SESSION['apiKey']    = $netopia->apiKey;
 

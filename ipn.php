@@ -9,15 +9,6 @@ include_once('lib/ipn.php');
 
 require_once 'vendor/autoload.php';
 
-/**
- * Load .env 
- */
-// $dotenv = new Dotenv\Dotenv(__DIR__);
-// $dotenv->load();
-
-$ipn = new ipn(); // New IPN OBJ
-
-
 use Firebase\JWT\JWT;
 use Firebase\JWT\SignatureInvalidException;
 use Firebase\JWT\BeforeValidException;
@@ -69,6 +60,11 @@ $setRealTimeLog = ["IPN"    =>  "IPN Is hitting"];
 log::setRealTimeLog($setRealTimeLog);
 
 /**
+ * get defined keys
+ */
+$ipn = new ipn(); // New IPN OBJ
+$ntpKeys = $ipn->getSetting();
+/**
  *  Fetch all HTTP request headers
  */
 $aHeaders = apache_request_headers();
@@ -114,6 +110,7 @@ if($verificationToken === null)
 
 /////////////////// --- POSITION PROBLEM START ///////////////////////////////////////////
 $publickKeyFilePath = 'certificates/live.LXTP-3WDM-WVXL-GC8B-Y5DA.public.cer';
+// $publickKeyFilePath = 'certificates/'.$ntpKeys['activeKey'].'.public.cer';
 if (file_exists($publickKeyFilePath)) {
     $publicKey = openssl_pkey_get_public('file://' . $publickKeyFilePath);
     if($publicKey === false)
@@ -134,14 +131,16 @@ if (file_exists($publickKeyFilePath)) {
     );
 } else {
     $setRealTimeLog['missingPublicKey'] = "The public key $publickKeyFilePath does not exist"; 
-    echo $setRealTimeLog['missingPublicKey'];
+    echo $setRealTimeLog['missingPublicKey'] . PHP_EOL; // IPN Response
+    
+    // Log
     log::setRealTimeLog($setRealTimeLog);
     exit;
 }
 /////////////////// --- POSITION PROBLEM END ///////////////////////////////////////////
 
-$HTTP_RAW_POST_DATA = file_get_contents('php://input');
-$input = json_decode($HTTP_RAW_POST_DATA);
+// $HTTP_RAW_POST_DATA = file_get_contents('php://input');
+// $input = json_decode($HTTP_RAW_POST_DATA);
 
 
 
@@ -182,8 +181,6 @@ try {
      * check active posSignature 
      * check if is in set of signature too
      */
-    $ntpKeys = $ipn->getKeys();
-
     if(empty($objJwt->aud) || $objJwt->aud != $ntpKeys['activeKey']){
         throw new \Exception('IDS_Service_IpnController__INVALID_SIGNATURE');
         exit;
@@ -194,6 +191,8 @@ try {
         exit;
     }
         
+    ///////////////////////////////////////////
+    ///////////////////////////////////////////
     $payload = $HTTP_RAW_POST_DATA;
     /**
 	 * validate payload

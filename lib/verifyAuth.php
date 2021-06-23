@@ -8,16 +8,7 @@ class verifyAuth {
     public $authenticationToken;
     public $ntpID;
     public function __construct(){
-        /**
-         * session already started at backAuth
-         * get values from session  
-         * */ 
-        
-        $this->apiKey = $_SESSION['apiKey'];
-        $this->authenticationToken = $_SESSION['authenticationToken'];
-        $this->ntpID = $_SESSION['ntpID'];
-
-        // die(print_r($_SESSION));
+        //
     }
 
     public function setVerifyAuth() {
